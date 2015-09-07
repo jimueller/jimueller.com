@@ -1,21 +1,28 @@
+# --------------------------------------------------
 # Site settings
+# --------------------------------------------------
 title: jimueller
 email: blog[at]jimueller.com
 tagline: "Magnets, Milksteak, and Rum Ham"
 description: "Developer. Covering topics on Web Development, Scripting, fitness, and funny."
 baseurl: ""
-#url: "http://jimueller.com"
-url: "http://jimueller.com.s3-website-us-east-1.amazonaws.com/"
+url: "http://jimueller.com"
 #url: "http://localhost:4000"
 paginate: 5
 
-# Accounts / Usernames
+# --------------------------------------------------
+# Accounts
+# --------------------------------------------------
 usernames:
   default: jimueller
   twitter: jimueller
   github:  jimueller
   bitbucket: jrmdev
-
+  
+  
+# --------------------------------------------------
+# Page / Post Defaults
+# --------------------------------------------------
 defaults:
  -
    scope:
@@ -26,7 +33,9 @@ defaults:
 
 
 
-# Build settings
+# --------------------------------------------------
+# Build Settings
+# --------------------------------------------------
 timezone: America/Chicago
 markdown: kramdown
 kramdown:
@@ -36,7 +45,9 @@ encoding: utf-8
 exclude:  ["vendor", "scripts", ".bak", "README.md", "Gemfile", "_deploy.yml"]
 gems: [octopress]
 
+# --------------------------------------------------
 # Output Settings
+# --------------------------------------------------
 permalink: pretty
 paginate_path: /page/:num
 post_ext: md
@@ -46,7 +57,9 @@ page_ext: html
 sass:
   style: :expanded
 
+# --------------------------------------------------
 # Plugins
+# --------------------------------------------------
 
 ## Live Tiles
 ie_tile_color: #003EFF
