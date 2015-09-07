@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 set -e # halt script on error
 
+echo "Deploying -- variables"
+echo "Commit Range: ${TRAVIS_COMMIT_RANGE}"
+echo "Build: ${TRAVIS_BUILD_NUMBER}"
+echo "Git Deploy Target: ${GIT_DEPLOY_TARGET}"
+echo "Git Remote Branch: ${GIT_REMOTE_BRANCH}"
+echo ${GIT_REMOTE_BRANCH}
+
 
 cd _site
 git init
