@@ -39,6 +39,8 @@ gems: [octopress]
 # Output Settings
 permalink: pretty
 paginate_path: /page/:num
+post_ext: md
+page_ext: html
 
 # Style
 sass:
