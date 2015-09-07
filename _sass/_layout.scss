@@ -11,17 +11,24 @@
     position: relative;
 }
 
+// .site-logo {
+//     float: left;
+//     max-height: 75%;
+//     margin-right: 1em;
+// }
+
 .site-title {
     font-size: 26px;
     line-height: 56px;
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
-
-//    &,
-//    &:visited {
-//       color: $grey-color-dark;
-//    }
+    color: $brand-color;
+    font-weight: bold;
+   &,
+   &:visited {
+      color: $brand-color;
+   }
 }
 
 .site-nav {
@@ -33,7 +40,7 @@
     }
 
     .page-link {
-        color: $yellow;
+        color: $accent-color;
         line-height: $base-line-height;
 
         // Gaps between nav items, but not on the last one
@@ -112,6 +119,16 @@
 .social-media-list {
     list-style: none;
     margin-left: 0;
+    
+    & a {
+        text-decoration: none;
+        
+        &:visited {
+            color: $link-color;
+        }
+               
+    }
+    
 }
 
 .footer-col-wrapper {
@@ -187,12 +204,19 @@
 
 .post-meta {
     font-size: $small-font-size;
-    color: $cyan;
+    color: $meta-color;
 }
 
 .post-link {
     display: block;
     font-size: 24px;
+    color: $brand-color;
+    &:visited{
+        color: darken($brand-color, 10);
+    }
+    &:hover{
+        color: lighten($brand-color, 10);
+    }
 }
 
 

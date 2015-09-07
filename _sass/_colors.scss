@@ -31,3 +31,21 @@ $violet 		: $solarized-violet;
 $blue 			: $solarized-blue;
 $cyan 			: $solarized-cyan;
 $green 			: $solarized-green;
+
+
+// -----------------------------------------------------
+// Theme
+// -----------------------------------------------------
+$brand-color    : $blue;
+$accent-color   : $yellow;
+$meta-color     : $yellow;
+
+
+// -----------------------------------------------------
+// Link Colors
+// -----------------------------------------------------
+
+$link-color         : $cyan;
+$link-visited-color : darken($link-color, 10);
+$link-active-color  : lighten($link-color, 10);
+
