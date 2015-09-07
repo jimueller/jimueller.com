@@ -1,0 +1,27 @@
+---
+layout: post
+title: Use PuTTY with Console2-tumblrVersion
+date: '2012-08-18T15:25:00-05:00'
+tags:
+- Console2
+- PuTTY
+- dev
+- utils
+- tools
+tumblr_url: http://blog.jimueller.com/post/29709142253/use-putty-with-console2
+---
+<p><a href="http://sourceforge.net/projects/console/files/" target="_blank">Console2</a> is a great frontend on Windows for cmd.exe and PowerShell.  It provides re-sizable windows, a tabbed interface, and transparent windows.</p>
+<p>It can also be used with <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank">PuTTY</a>, but it takes a little bit of work.  The issue is apparently with ANSI escape codes. Thankfully David A. Sjøen (<a href="https://twitter.com/dasjoen/" target="_blank">@dasjoen</a>) commented on <a href="http://www.hanselman.com/blog/Console2ABetterWindowsCommandPrompt.aspx" target="_blank">Scott Hanselman&#8217;s Console2 article</a> with the solution using ANSICON.</p>
+<p>From the <a href="https://github.com/adoxa/ansicon#readme" target="_blank">ANSICON ReadMe</a></p>
+<blockquote>
+<p>ANSICON provides ANSI escape sequences for Windows console programs. It provides much the same functionality as `ANSI.SYS&#8217; does for MS-DOS. </p>
+</blockquote>
+<hr><p><br/><strong>Instructions</strong></p>
+<ol><li>Download ANSICON (<a href="https://github.com/adoxa/ansicon/downloads" target="_blank">Github Repo</a>) and extract the contents from the x86 or x64 folders to your Console2 installation folder.<br/><br/>I now have the following files in my C:\Program Files\Console2\ directory:<br/><ul><li>ANSI32.dll</li>
+<li>ANSI64.dll</li>
+<li>ansicon.exe</li>
+<li>ANSI-LLW.exe<br/> </li>
+</ul></li>
+<li><span>Open Console2 and create a new tab with the command line:</span><br/><pre>C:\Program Files\Console2\ansicon.exe "C:\Program Files (x86)\PuTTY\plink.exe" -load <em>aPuttyProfileName</em></pre>
+</li>
+</ol>

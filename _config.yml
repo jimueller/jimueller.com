@@ -1,0 +1,54 @@
+# Site settings
+title: jimueller
+email: blog[at]jimueller.com
+tagline: "Magnets, Milksteak, and Rum Ham"
+description: "Developer. Covering topics on Web Development, Scripting, fitness, and funny."
+baseurl: ""
+#url: "http://jimueller.com"
+url: "http://jimueller.com.s3-website-us-east-1.amazonaws.com/"
+#url: "http://localhost:4000"
+paginate: 5
+
+# Accounts / Usernames
+usernames:
+  default: jimueller
+  twitter: jimueller
+  github:  jimueller
+  bitbucket: jrmdev
+
+defaults:
+ -
+   scope:
+     type: "posts"
+   values:
+     layout: "post"
+     author: "Jim Mueller"
+
+
+
+# Build settings
+timezone: America/Chicago
+markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: pygments
+encoding: utf-8
+exclude:  [".bak", "README.md", "Gemfile", "_deploy.yml"]
+gems: [octopress]
+
+# Output Settings
+permalink: pretty
+paginate_path: /page/:num
+
+# Style
+sass:
+  style: :expanded
+
+# Plugins
+
+## Live Tiles
+ie_tile_color: #003EFF
+ie_tile_small: images/livetile/tiny.png
+ie_tile_medium: images/livetile/square.png
+ie_tile_wide: images/livetile/wide.png
+ie_tile_large: images/livetile/large.png

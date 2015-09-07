@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg2"
+   viewBox="0 0 103.72959 51.864792"
+   height="14.637397mm"
+   width="29.274796mm">
+  <defs
+     id="defs4" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-253.84952,-412.14409)"
+     id="layer1">
+    <rect
+       y="413.90643"
+       x="255.61186"
+       height="48.340103"
+       width="100.2049"
+       id="rect3338"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       transform="scale(0.97221289,1.0285813)"
+       id="text4146"
+       y="455.37668"
+       x="289.74603"
+       style="font-style:normal;font-weight:normal;font-size:49.69047546px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:60px;font-family:Overpass;-inkscape-font-specification:'Overpass Bold'"
+         y="455.37668"
+         x="289.74603"
+         id="tspan4148" /></text>
+    <text
+       id="text4150"
+       y="438.36221"
+       x="277"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="438.36221"
+         x="277"
+         id="tspan4152" /></text>
+    <g
+       id="text4154"
+       style="font-style:normal;font-weight:normal;font-size:32.66615677px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="scale(1.0046923,0.99532964)">
+      <path
+         id="path4716"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48.99923325px;font-family:Overpass;-inkscape-font-specification:'Overpass Bold'"
+         d="m 294.6736,458.23476 q -1.86618,0 -3.58881,-0.52636 -1.69871,-0.50243 -3.18208,-1.45945 -1.45945,-0.98094 -2.67965,-2.36861 -1.19627,-1.4116 -2.05758,-3.20601 l 5.78995,-2.67964 q 0.95701,1.84225 2.36861,2.84712 1.43553,1.00487 3.34956,1.00487 1.00487,0 1.93796,-0.26318 0.93309,-0.28711 1.65085,-1.02879 0.71776,-0.74169 1.14842,-2.03366 0.43066,-1.3159 0.43066,-3.37349 l 0,-21.81997 6.60341,0 0,22.39418 q 0,2.4404 -0.50243,4.3305 -0.50244,1.89011 -1.36375,3.27778 -0.86132,1.38768 -2.00974,2.34469 -1.14842,0.93309 -2.46431,1.5073 -1.3159,0.55029 -2.70358,0.78954 -1.38767,0.26318 -2.72749,0.26318 z" />
+      <path
+         id="path4718"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48.99923325px;font-family:Overpass;-inkscape-font-specification:'Overpass Bold'"
+         d="m 340.2515,457.63663 0,-17.63303 q 0,-0.2871 0,-0.66991 0.0239,-0.38281 0.0239,-0.76561 0.0239,-0.40673 0.0239,-0.74169 0.0239,-0.33496 0.0478,-0.52636 -0.26318,0.81347 -0.52636,1.45945 -0.23925,0.64599 -0.50243,1.24412 l -8.32604,18.23116 -8.3739,-18.23116 q -0.26318,-0.59813 -0.52636,-1.24412 -0.23925,-0.64598 -0.50243,-1.45945 0.0239,0.1914 0.0239,0.52636 0.0239,0.33496 0.0239,0.74169 0.0239,0.3828 0.0239,0.76561 0.0239,0.38281 0.0239,0.66991 l 0,17.63303 -6.62734,0 0,-34.30904 6.72304,0 8.42175,18.925 q 0.26318,0.62206 0.4785,1.19627 0.21533,0.55029 0.40674,1.14842 0.1914,-0.59813 0.40673,-1.14842 0.21533,-0.57421 0.47851,-1.19627 l 8.56529,-18.925 6.31631,0 0,34.30904 -6.60341,0 z" />
+    </g>
+  </g>
+</svg>

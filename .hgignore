@@ -1,0 +1,34 @@
+# Numerous always-ignore extensions
+glob:*.diff
+glob:*.err
+glob:*.orig
+glob:*.log
+glob:*.rej
+glob:*.swo
+glob:*.swp
+glob:*.vi
+glob:*~
+
+# OS or Editor folders
+glob:.DS_Store
+glob:.cache
+glob:.project
+glob:.settings
+glob:nbproject
+glob:thumbs.db
+
+# Jekyll
+glob:_site
+glob:ietemplates
+glob:*.bak
+glob:.sass-cache
+glob:_deploy.sh
+glob:_rsync_exclude.txt
+
+# Octopress
+glob:_deploy.yml
+
+# Folders to ignore
+glob:.hg
+glob:.svn
+glob:.git
