@@ -20,4 +20,4 @@ git commit -m "Deploy - Commit: ${TRAVIS_COMMIT_RANGE}, Build: ${TRAVIS_BUILD_NU
 
 # We redirect any output to
 # /dev/null to hide any sensitive credential data that might otherwise be exposed.
-git push --force --quiet "https://${GH_USER}:${GH_OAUTH}@${GIT_DEPLOY_TARGET}" master:${GIT_REMOTE_BRANCH} > /dev/null 2>&1
+git push --force --quiet "https://${GH_OAUTH}@${GIT_DEPLOY_TARGET}" master:${GIT_REMOTE_BRANCH} > /dev/null 2>&1
