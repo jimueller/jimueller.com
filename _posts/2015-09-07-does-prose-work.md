@@ -1,6 +1,7 @@
 ---
-published: false
+published: true
 ---
+
 
 ## How well does this work? A test post from Prose.io
 
