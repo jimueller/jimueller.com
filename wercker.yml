@@ -1,10 +1,18 @@
 # our build should run within a Ruby box
-box: jekyll/jekyll
+box: wercker/ruby
 build:
   steps:
     # Run a smart version of bundle install
     # which improves build execution time of
     # future builds
+    
+    # Install javascript environment
+    # A step that executes `npm install` command
+    - npm-install
+    # A step that executes `npm test` command
+    - npm-test
+
+    
     - script:
         name: bundle - nokogiri use sys lib
         code: bundle config build.nokogiri --use-system-libraries
