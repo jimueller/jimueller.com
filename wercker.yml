@@ -1,5 +1,5 @@
 # our build should run within a Ruby box
-box: wercker/ruby
+box: ruby
 build:
   steps:
     # Run a smart version of bundle install
