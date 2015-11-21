@@ -42,7 +42,7 @@ kramdown:
   input: GFM
 highlighter: pygments
 encoding: utf-8
-exclude:  ["vendor", "scripts", ".bak", "README.md", "Gemfile", "_deploy.yml"]
+exclude:  ["vendor", "scripts", ".bak", "README.md", "Gemfile", "_deploy.yml", "werker.yml"]
 gems: [octopress]
 
 # --------------------------------------------------
