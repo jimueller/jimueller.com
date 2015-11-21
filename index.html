@@ -19,7 +19,7 @@ layout: default
             {% endif %}
 
             <p class="post-meta">
-              <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span> by <span class="post-author"> {{ post.author }}</span> under
+              <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span> under
               <span class="post-categories">
                 {% for category in post.categories %}
                   <a class="post-category" href="{{ category | prepend: '../' }}">{{ category | capitalize }}</a>
@@ -33,7 +33,7 @@ layout: default
           </div>
           
           <footer class="post-footer">
-          <a class="post-readmore" href="{{ post.url | prepend: site.baseurl }}">Continue Reading {% icon fa-long-arrow-right %}</a>
+            <a class="post-readmore" href="{{ post.url | prepend: site.baseurl }}">Continue Reading {% icon fa-long-arrow-right %}</a>
           </footer>
           
       </section>
