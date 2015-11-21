@@ -5,7 +5,11 @@ build:
     # Run a smart version of bundle install
     # which improves build execution time of
     # future builds
-    - bundle-install
+    - script:
+        name: bundle - nokogiri use sys lib
+        code: bundle config build.nokogiri --use-system-libraries
+    
+    bundle-install
 
     # A custom script step
     # that actually builds the jekyll site
