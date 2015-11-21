@@ -4,20 +4,40 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="page-heading">Recent Posts</h1>
 
-  <ul class="post-list">
+  <div class="post-list">
     {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <section class="post">
+          <header class="post-header">
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+            {% if post.link %}
+              <h2 class="post-title link-post"><a href="{{ post.link }}">{{ post.title }} {% icon fa-external-link %}</a></h2>
+            {% else %}
+              <img class="post-avatar" alt="{{ post.author }}&#x27;s avatar" height="48" width="48" src="{{ "/images/avatar/racoon-circle_avatar.png" | prepend: site.baseurl}}">
+              <h2 class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+            {% endif %}
+
+            <p class="post-meta">
+              <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span> by <span class="post-author"> {{ post.author }}</span> under
+              <span class="post-categories">
+                {% for category in post.categories %}
+                  <a class="post-category" href="{{ category | prepend: '../' }}">{{ category | capitalize }}</a>
+                {% endfor %}
+              </span>
+            </p>
+          </header>
+            
+          <div class="post-description">
+            {{ post.excerpt }}
+          </div>
+          
+          <footer class="post-footer">
+          <a class="post-readmore" href="{{ post.url | prepend: site.baseurl }}">Continue Reading {% icon fa-long-arrow-right %}</a>
+          </footer>
+          
+      </section>
     {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  </div>
 
 </div>

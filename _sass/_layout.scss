@@ -199,11 +199,16 @@
 
 .post-list {
     margin-left: 0;
-    list-style: none;
 
-    > li {
+    > section {
         margin-bottom: $spacing-unit;
     }
+}
+
+.post {
+    @extend %clearfix;
+    background-color: $gray-darkest;
+    padding: 1em;
 }
 
 .post-meta {
@@ -233,13 +238,17 @@
 }
 
 .post-title {
-    font-size: 42px;
+    //font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
 
     @include media-query($on-laptop) {
         font-size: 36px;
     }
+}
+
+.post-avatar {
+    float: right;
 }
 
 .post-content {
@@ -268,4 +277,11 @@
             font-size: 18px;
         }
     }
+}
+
+.post-readmore {
+    color: $gray-dark;
+    font-style: italic;
+    font-size: 0.8em;
+    display: block;
 }
