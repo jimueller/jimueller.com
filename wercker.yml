@@ -1,5 +1,5 @@
 # our build should run within a Ruby box
-box: ruby
+box: wercker/ruby
 build:
   steps:
     # Run a smart version of bundle install
@@ -12,3 +12,12 @@ build:
     - script:
         name: generate site
         code: bundle exec jekyll build --trace
+
+deploy:
+  steps:
+    # Deploy to s3
+    - s3sync:
+      key_id: $AWS_S3_ID
+      key_secret: $AWS_S3_SECRET
+      bucket_url: $AWS_S3_BUCKET_URL
+      source_dir: _site/
