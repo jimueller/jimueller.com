@@ -1,5 +1,5 @@
 # our build should run within a Ruby box
-box: octopress/octopress
+box: jekyll/builder
 build:
   steps:
     # Run a smart version of bundle install
