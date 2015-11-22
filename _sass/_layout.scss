@@ -305,3 +305,20 @@
     font-size: 0.8em;
     display: block;
 }
+
+
+.heartbeat {
+   clear: both;
+   float: right;
+   padding-right: 0.5em;
+   cursor: pointer;
+   
+    .heartbeat-icon {
+        color: $background-dark;
+        
+        &:hover {
+            color: $red;
+        }
+                
+    }
+}
