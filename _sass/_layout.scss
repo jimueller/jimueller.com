@@ -248,6 +248,11 @@
     
     > a {
         color: $brand-color;
+        
+        &:hover {
+            text-decoration: none;
+            color: lighten($brand-color, 5);
+        }
     }
 }
 
@@ -290,13 +295,20 @@
 .post-category {
     font-size: 0.8em;
     //font-weight: bold;
-    color: $gray-light;
-    background-color: $gray-darker;
+    color: $yellow;
+    background-color: $gray-darkest;
     border-radius: 2px;
-    border: 1px solid $gray-light;
+    border: 1px solid $yellow;
     display: inline-block;
-    padding: 2px;
-
+    padding: 0px 2px 0px 2px;
+    //padding: 1px 2px;
+    
+    &:hover {
+        color: lighten($yellow, 10);
+        border: 1px solid lighten($yellow, 10);
+        text-decoration: none;
+        background: $gray-darker;
+    }
 }
 
 .post-readmore {
