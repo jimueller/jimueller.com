@@ -40,10 +40,10 @@ timezone: America/Chicago
 markdown: kramdown
 kramdown:
   input: GFM
-highlighter: pygments
+highlighter: rouge
 encoding: utf-8
 exclude:  ["vendor", "scripts", ".bak", "README.md", "Gemfile", "_deploy.yml", "werker.yml"]
-gems: [octopress]
+gems: [octopress, jekyll-paginate]
 
 # --------------------------------------------------
 # Output Settings
