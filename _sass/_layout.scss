@@ -238,12 +238,16 @@
 }
 
 .post-title {
-    //font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
+    color: $brand-color;
 
     @include media-query($on-laptop) {
         font-size: 36px;
+    }
+    
+    > a {
+        color: $brand-color;
     }
 }
 
@@ -277,6 +281,22 @@
             font-size: 18px;
         }
     }
+}
+
+// .post-categories {
+    
+// }
+
+.post-category {
+    font-size: 0.8em;
+    //font-weight: bold;
+    color: $gray-light;
+    background-color: $gray-darker;
+    border-radius: 2px;
+    border: 1px solid $gray-light;
+    display: inline-block;
+    padding: 2px;
+
 }
 
 .post-readmore {
