@@ -311,14 +311,13 @@
    clear: both;
    float: right;
    padding-right: 0.5em;
-   cursor: pointer;
+   cursor: default;
    
-    .heartbeat-icon {
-        color: $background-dark;
+   .heartbeat-icon {
+       color: $background-dark;
         
-        &:hover {
-            color: $red;
-        }
-                
-    }
+       &:hover {
+           color: $red;
+       }
+   }
 }
