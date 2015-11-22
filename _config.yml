@@ -42,7 +42,7 @@ kramdown:
   input: GFM
 highlighter: rouge
 encoding: utf-8
-exclude:  ["vendor", "scripts", ".bak", "README.md", "Gemfile", "_deploy.yml", "werker.yml"]
+exclude:  ["vendor", "scripts", ".bak", "README.md", "Gemfile", "_deploy.yml", "werker.yml", "Guardfile"]
 gems: [octopress, jekyll-paginate]
 
 # --------------------------------------------------
