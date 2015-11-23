@@ -79,6 +79,11 @@ GEM
       octopress-hooks (~> 2.0)
       redcarpet (~> 3.0)
       titlecase
+    octopress-code-highlighter (4.2.6)
+      colorator (~> 0.1)
+      octopress-hooks
+    octopress-codeblock (1.0.5)
+      octopress-code-highlighter (~> 4.2)
     octopress-deploy (1.3.0)
       colorator
     octopress-escape-code (2.0.6)
@@ -116,6 +121,7 @@ DEPENDENCIES
   jekyll
   jekyll-paginate
   octopress (~> 3.0)
+  octopress-codeblock
 
 BUNDLED WITH
    1.10.6
