@@ -2,6 +2,7 @@
 layout: {{ layout }}
 title: "{{ title }}"
 date: {{ date }}
+publish: true
 categories:
 tags:
 ---
