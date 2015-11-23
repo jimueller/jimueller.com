@@ -316,8 +316,37 @@
     font-style: italic;
     font-size: 0.8em;
     display: block;
+    float: right;
+    
+    &:visited {
+        color: $gray-dark;
+    }
 }
 
+.post-tags {
+    list-style: none;
+    margin-left: 0px;
+    float: left;
+    
+    &::before {
+        font-family: 'FontAwesome';
+        color: $green;
+        content: '\f02c';
+        position: relative;
+        top: 3px;
+    }
+}
+
+.post-tag {
+    list-style-type: none;
+    display: inline-flex;
+    background-color: $gray-darker;
+    color: $green;
+    font-size: .7em;
+    padding: 2px 3px;
+    letter-spacing: normal;
+    border-radius: 2px;
+}
 
 .heartbeat {
    clear: both;
@@ -332,4 +361,12 @@
            color: $red;
        }
    }
+}
+
+//
+// Labels
+//
+
+.label {
+
 }

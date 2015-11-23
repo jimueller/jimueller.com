@@ -3,7 +3,10 @@ layout: post
 title: "Easily Install and Update Visual Studio Code on Ubuntu"
 date: 2015-11-21T22:40:02-06:00
 categories: Tools
-tags: VSCode
+tags: 
+ - VSCode
+ - Ubuntu-Make
+ - Ubuntu
 ---
 
 [Visual Studio Code](https://code.visualstudio.com/), my current go-to editor on Windows and Linux. I prefer Xubuntu for it's combination of speed, configurability, and Git integration. It's just a really nice editor.
@@ -18,6 +21,8 @@ I wasn't previously aware of Ubuntu Make, here's the definition from the Ubuntu 
 > Ubuntu Make is a command line tool which allows you to download the latest version of popular developer tools on your installation, installing it longside all the required dependencies (which will only ask for root access if you don't  have all the required dependencies installed already), enable multi-arch on your system if you are on a 64 bit machine, integrate it with the Unity launcher… Basically, one command to get your system ready to develop with! 
 
 Sounds great, and it is. Installing with Ubuntu Make gives the added benefits of making upgrading a one step process and making the Code icon available in menus and launchers.
+
+<!--more-->
 
 #### Installation
 

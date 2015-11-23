@@ -34,6 +34,14 @@ layout: default
           
           <footer class="post-footer">
             <a class="post-readmore" href="{{ post.url | prepend: site.baseurl }}">Continue Reading {% icon fa-long-arrow-right %}</a>
+            
+            {% if post.tags != empty %}
+              <ul class="post-tags">
+              {% for tag in post.tags %}
+                <li class="label post-tag">{{ tag }}</li>
+              {% endfor %}
+              </ul>
+            {% endif %}
           </footer>
           
       </section>
