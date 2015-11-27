@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "ExtJS Utility Classes"
-date:   2015-11-12 15:07:43
+title: ExtJS Utility Classes
+date: {}
 categories: dev
 tags: ExtJS
+published: true
 ---
 
-Ext JS provides many useful utility classes that can often be forgotten about with the libraries 
-focus on UI widgets and data package.  These utility classes generally remove the need to use other
-Javascript libraries such as jQuery with your ExtJS application.
+
+Ext JS provides many useful utility classes that can often be forgotten about with the libraries focus on UI widgets and data package.  These utility classes generally remove the need to use other Javascript libraries such as jQuery with your ExtJS application.
 
 # Ext.Array
 
