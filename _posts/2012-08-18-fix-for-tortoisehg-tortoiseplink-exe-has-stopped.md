@@ -2,13 +2,13 @@
 layout: post
 title: 'Fix for TortoiseHg: TortoisePlink.exe has stopped working'
 date: '2012-08-18T19:11:00-05:00'
+categories: dev
 tags:
 - Pageant
 - TortoiseHg
 - hg
 - utils
 - ssh
-tumblr_url: http://blog.jimueller.com/post/29721970757/fix-for-tortoisehg-tortoiseplink-exe-has-stopped
 ---
 If trying to use hg push with SSH and receiving the error **TortoisePlink.exe has stopped working**, make sure that the Pageant.exe that is running is the one from the TortoiseHg install directory.
 
