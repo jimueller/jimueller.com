@@ -2,7 +2,7 @@
 layout: post
 title: 'HOWTO: Install fme dqman without Document Client'
 date: '2013-09-06T09:59:54-05:00'
-categories: [dev]
+categories: [Dev]
 tags: [documentum, dqman]
 tumblr_url: http://blog.jimueller.com/post/60452775758/howto-install-fme-dqman-without-document-client
 ---

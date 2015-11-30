@@ -2,7 +2,8 @@
 layout: post
 title: 'Fix for TortoiseHg: TortoisePlink.exe has stopped working'
 date: '2012-08-18T19:11:00-05:00'
-categories: dev
+categories:
+- Tools
 tags:
 - Pageant
 - TortoiseHg

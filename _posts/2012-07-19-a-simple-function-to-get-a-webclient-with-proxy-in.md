@@ -2,7 +2,9 @@
 layout: post
 title: A Simple Function to Get a WebClient (with proxy) in PowerShell | David Mohundro
 date: '2012-07-19T08:18:00-05:00'
-categories: dev
+categories: 
+- Dev
+- Scripting
 tags:
 - powershell
 - proxy

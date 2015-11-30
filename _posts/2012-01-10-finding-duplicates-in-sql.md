@@ -3,7 +3,7 @@ layout: post
 title: Finding Duplicates in SQL
 date: '2012-01-10T10:59:00-06:00'
 categories:
-- dev
+- Dev
 tags:
 - SQL
 ---

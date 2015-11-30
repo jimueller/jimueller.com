@@ -2,7 +2,9 @@
 layout: post
 title: Use PuTTY with Console2
 date: '2012-08-18T15:25:00-05:00'
-categories: dev tools
+categories: 
+- Dev
+- Tools
 tags:
 - console2
 - ansicon

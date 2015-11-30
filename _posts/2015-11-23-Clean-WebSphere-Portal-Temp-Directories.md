@@ -6,7 +6,7 @@ publish: false
 categories:
  - Dev
 tags:
- - WebSphere-Portal
+ - websphere-portal
 ---
 
 WebSphere and WebSphere Portal create temporary directories for managing publish state, session state, and other data that can accumulate, degrading performance and causing publishing synchronization issues, especially on a development machine.  If you begin to experience slow startup times or have publishing errors from RAD, cleaning temp folders can often resolve these issues.

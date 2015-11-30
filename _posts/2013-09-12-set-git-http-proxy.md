@@ -2,6 +2,8 @@
 layout: post
 title: Set Git Http Proxy
 date: '2013-09-12T09:15:39-05:00'
+categories:
+- Tools
 tags: [git]
 tumblr_url: http://blog.jimueller.com/post/61023104212/set-git-http-proxy
 ---
