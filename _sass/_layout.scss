@@ -294,14 +294,16 @@
 
 .post-category {
     font-size: 0.8em;
-    //font-weight: bold;
     color: $yellow;
     background-color: $gray-darkest;
     border-radius: 2px;
     border: 1px solid $yellow;
     display: inline-block;
     padding: 0px 2px 0px 2px;
-    //padding: 1px 2px;
+    
+    &:visited{
+        color: $yellow;
+    }
     
     &:hover {
         color: lighten($yellow, 10);
@@ -346,6 +348,15 @@
     padding: 2px 3px;
     letter-spacing: normal;
     border-radius: 2px;
+    
+    > a {
+        color: $green;
+        
+        &:hover {
+            color: lighten($green, 10);
+            text-decoration: none;
+        }
+    }
 }
 
 .heartbeat {

@@ -43,7 +43,7 @@ kramdown:
 highlighter: rouge
 encoding: utf-8
 exclude:  ["vendor", "scripts", ".bak", "README.md", "Gemfile", "_deploy.yml", "wercker.yml", "Guardfile"]
-gems: [octopress, jekyll-paginate]
+gems: [octopress, jekyll-paginate, jekyll-archives]
 
 # --------------------------------------------------
 # Output Settings
@@ -67,3 +67,19 @@ ie_tile_small: images/livetile/tiny.png
 ie_tile_medium: images/livetile/square.png
 ie_tile_wide: images/livetile/wide.png
 ie_tile_large: images/livetile/large.png
+
+## jekyll-archives
+jekyll-archives:
+  enabled: all
+  layouts:
+    year: archive-year
+    month: archive-month
+    day: archive-day
+    tag: archive-category-tag
+    category: archive-category-tag
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'

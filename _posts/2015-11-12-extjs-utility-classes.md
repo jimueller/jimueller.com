@@ -2,7 +2,7 @@
 layout: post
 title: ExtJS Utility Classes
 date: 2015-11-12
-categories: dev
+categories: Dev
 tags: ExtJS
 published: true
 ---
