@@ -40,6 +40,8 @@ timezone: America/Chicago
 markdown: kramdown
 kramdown:
   input: GFM
+  # Ignore linebreaks within a paragraph in markdown
+  hard_wrap: false
 highlighter: rouge
 encoding: utf-8
 exclude:  ["vendor", "scripts", ".bak", "README.md", "Gemfile", "_deploy.yml", "wercker.yml", "Guardfile"]

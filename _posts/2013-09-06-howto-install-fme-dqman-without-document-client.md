@@ -15,9 +15,9 @@ _The following procedure is for Documentum 6.5, it may be applicable for other v
 3. From the content server, copy the `dmcl.dll` file from the `Documentum\product\6.5\bin` directory to a location on your system Path.
 4. Create a dmcl.ini file and place the following section.
 	
-	{% highlight ini %}
+	```ini
 	[DOCBROKER_PRIMARY]
 	host=yourContentServer #IP or Hostname
-	{% endhighlight %}
+	```
 
 5. Create and Environmental Variable named `DCML_CONFIG` that points to the `dmcl.ini` file.  E.g. `C:\dmcl.ini`
