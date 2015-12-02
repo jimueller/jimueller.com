@@ -1,0 +1,32 @@
+/**
+ * Site header
+ */
+.site-header {
+    background-color: $gray-darkest;
+    border-top: 5px solid $gray-dark;
+    border-bottom: 1px solid $gray-dark;
+    min-height: 56px;
+
+    // Positioning context for the mobile navigation icon
+    position: relative;
+}
+
+// .site-logo {
+//     float: left;
+//     max-height: 75%;
+//     margin-right: 1em;
+// }
+
+.site-title {
+    font-size: 26px;
+    line-height: 56px;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+    float: left;
+    color: $brand-color;
+    font-weight: bold;
+   &,
+   &:visited {
+      color: $brand-color;
+   }
+}

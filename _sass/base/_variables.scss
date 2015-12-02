@@ -1,0 +1,93 @@
+// ---------------------------------------------------------------------
+// Colors
+// ---------------------------------------------------------------------
+
+// # Solarized Colors
+$solarized-base03  :  #002b36; // Background Darkest
+$solarized-base02  :  #073642; // Background Darker
+$solarized-base01  :  #586e75; // Content Darkest
+$solarized-base00  :  #657b83; // Content Dark
+$solarized-base0   :  #839496; // Content 
+$solarized-base1   :  #93a1a1; // Content Light
+$solarized-base2   :  #eee8d5; // Background Light
+$solarized-base3   :  #fdf6e3; // Background Lightest
+$solarized-yellow  :  #b58900; // Yellow
+$solarized-orange  :  #cb4b16; // Orange
+$solarized-red     :  #dc322f; // Red
+$solarized-magenta :  #d33682; // Magenta
+$solarized-violet  :  #6c71c4; // Violet
+$solarized-blue    :  #268bd2; // Blue
+$solarized-cyan    :  #2aa198; // Cyan
+$solarized-green   :  #859900; // Green
+
+// Generic colors
+$gray-darkest   : $solarized-base03;
+$gray-darker    : $solarized-base02;
+$gray-dark	    : $solarized-base01;
+$gray			: $solarized-base00;
+$gray-light		: $solarized-base0;
+$gray-lightest	: $solarized-base1;
+$yellow 		: $solarized-yellow;
+$orange 		: $solarized-orange;
+$red 			: $solarized-red;
+$magenta 		: $solarized-magenta;
+$violet 		: $solarized-violet;
+$blue 			: $solarized-blue;
+$cyan 			: $solarized-cyan;
+$green 			: $solarized-green;
+
+
+// -----------------------------------------------------
+// Theme
+// -----------------------------------------------------
+$brand-color      : $blue;
+$accent-color     : $yellow;
+$meta-color       : $yellow;
+$background-dark  : $gray-darkest;
+$background-light : $gray-darker;
+
+
+// -----------------------------------------------------
+// Link Colors
+// -----------------------------------------------------
+
+$link-color         : $cyan;
+$link-visited-color : darken($link-color, 10);
+$link-active-color  : lighten($link-color, 10);
+
+// Typography
+$base-font-family: $helvetica;
+$heading-font-family: $base-font-family;
+
+// Font Sizes
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Font Colors
+$base-font-color: $gray-light;
+$action-color: $blue;
+
+// Border
+$base-border-color: $gray-light;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$base-background-color: $background-light;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
