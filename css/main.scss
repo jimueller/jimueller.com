@@ -2,7 +2,12 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
-
+//Import partials from `sass_dir` (defaults to `_sass`)
+@import "vendor/normalize";
+@import "vendor/bourbon/bourbon";
+@import "modules/grid-settings";
+@import "vendor/neat/neat";
+@import "base";
 
 
 // // Our variables
@@ -46,12 +51,12 @@
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "bourbon/bourbon";
-@import "base/grid-settings";
-@import "neat/neat";
-@import "base/base";
+//@import "bourbon/bourbon";
+// @import "base/grid-settings";
+// @import "neat/neat";
+// @import "base/base";
 
-//@import "base";
-//@import "layout";
-@import "pinboard";
-@import "util/syntax-highlighting/solarized-dark";
+// //@import "base";
+// //@import "layout";
+// @import "pinboard";
+// @import "util/syntax-highlighting/solarized-dark";

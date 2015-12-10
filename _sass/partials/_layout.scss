@@ -1,0 +1,29 @@
+//
+// Layout tyles
+//
+
+.page-content {
+	@include outer-container();
+	
+	margin-top: 1em;
+	
+	.wrapper {
+		@include span-columns(8);
+		@include shift(2);
+	}
+}
+
+.post-list {
+
+}
+
+//
+// Site Header
+//
+
+.site-header {
+	
+	.wrapper {
+		@include outer-container();
+	}
+}

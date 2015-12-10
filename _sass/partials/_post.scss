@@ -23,7 +23,11 @@
 */
 
 .post {
-	
+	@include clearfix;
+  margin: 2em 0;
+  padding: 1em;
+  background: $gray-darkest;
+  border-radius: 3px;
 }
 
 //
@@ -31,15 +35,20 @@
 //
 
 .post-header {
-	
+    margin-bottom: 1em;
+    border-bottom: 1px solid $gray-darker;
 }
 
 .post-title {
-	
+
+}
+
+.post-avatar {
+    float: right;
 }
 
 .post-meta {
-	
+  color: $yellow;	
 }
 
 //
@@ -53,7 +62,14 @@
 // Post Footer
 //
 .post-footer {
-	
+  border-top: 1px solid $gray-darker;
+  padding-top: 1em;
+  
+  
+  .post-readmore {
+    float: right;
+    font-size: 0.8em;
+  }	
 }
 
 

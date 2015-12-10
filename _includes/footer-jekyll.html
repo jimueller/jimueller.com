@@ -1,0 +1,60 @@
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">{{ site.title }}</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          {% if site.usernames.github %}
+          <li>
+            <a href="https://github.com/{{ site.usersnames.github }}">
+              <span class="icon">{% icon fa-github-square %}
+              </span>
+
+              <span class="username">{{ site.usernames.github }}</span>
+            </a>
+          </li>
+          {% endif %}
+
+          {% if site.usernames.twitter %}
+          <li>
+            <a href="https://twitter.com/{{ site.usernames.twitter }}">
+              <span class="icon">{% icon fa-twitter-square %}
+              </span>
+
+              <span class="username">{{ site.usernames.twitter }}</span>
+            </a>
+          </li>
+          {% endif %}
+          
+          <li>
+            <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
+            <span class="icon">{% icon fa-rss-square %}</span>
+              Subscribe
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p class="footer-description">{{ site.description }}</p>
+      </div>
+    </div>
+
+  </div>
+  
+  <div class="heartbeat">
+    <i class="heartbeat-icon fa fa-heartbeat" title="Generated: {{ site.time }}"></i>
+  </div>  
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

@@ -1,60 +1,43 @@
-<footer class="site-footer">
+<!--<div class="wrapper-for-content-outside-of-footer">
+   Uncomment this whole section for a sticky footer. The content of the page should be inside of this .wrapper-for-content-outside-of-footer
+</div>-->
 
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.usernames.github %}
-          <li>
-            <a href="https://github.com/{{ site.usersnames.github }}">
-              <span class="icon">{% icon fa-github-square %}
-              </span>
-
-              <span class="username">{{ site.usernames.github }}</span>
-            </a>
-          </li>
-          {% endif %}
-
-          {% if site.usernames.twitter %}
-          <li>
-            <a href="https://twitter.com/{{ site.usernames.twitter }}">
-              <span class="icon">{% icon fa-twitter-square %}
-              </span>
-
-              <span class="username">{{ site.usernames.twitter }}</span>
-            </a>
-          </li>
-          {% endif %}
-          
-          <li>
-            <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
-            <span class="icon">{% icon fa-rss-square %}</span>
-              Subscribe
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p class="footer-description">{{ site.description }}</p>
-      </div>
-    </div>
-
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-logo">
+    <!--<img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo image">-->
+    <h1 class="footer-heading">{{ site.title }}</h1>
   </div>
-  
-  <div class="heartbeat">
-    <i class="heartbeat-icon fa fa-heartbeat" title="Generated: {{ site.time }}"></i>
-  </div>  
 
+  <ul>
+    {% for page in site.pages %} 
+      {% if page.title %}
+        <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a> 
+      {% endif %} 
+    {% endfor %}
+  </ul>
+
+  <div class="footer-secondary-links">
+    <ul>
+      <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+    </ul>
+
+    <ul class="footer-social">
+
+      <li>
+        <a href="https://twitter.com/{{ site.usernames.twitter }}">
+          <span class="footer-social-icon">{% icon fa-twitter-square fa-2x %}</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/{{ site.usersnames.github }}">
+          <span class="footer-social-icon">{% icon fa-github-square fa-2x %}</span>
+        </a>
+      </li>
+      <li>
+        <a href="{{ " /feed.xml " | prepend: site.baseurl }}">
+          <span class="footer-social-icon">{% icon fa-rss-square fa-2x %}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
 </footer>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
