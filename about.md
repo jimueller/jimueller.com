@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+navlink: true
 ---
 
 ## About this site
