@@ -14,4 +14,5 @@ gem 'guard-livereload'
 group :jekyll_plugins do
   #gem 'octopress-codeblock'
   gem 'octopress-codefence'
+  gem 'jekyll-lunr-js-search'
 end

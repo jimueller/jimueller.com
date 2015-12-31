@@ -45,7 +45,7 @@ kramdown:
 highlighter: rouge
 encoding: utf-8
 exclude:  ["vendor", "scripts", ".bak", "README.md", "Gemfile", "_deploy.yml", "wercker.yml", "Guardfile"]
-gems: [octopress, jekyll-paginate, jekyll-archives]
+gems: [octopress, jekyll-paginate, jekyll-archives, jekyll-lunr-js-search]
 
 # --------------------------------------------------
 # Output Settings
