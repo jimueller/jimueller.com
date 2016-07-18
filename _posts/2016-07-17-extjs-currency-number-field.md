@@ -11,6 +11,8 @@ tags:
 
 My attempt at a number field that displays formatted currency and works with MVVM.
 
+<iframe src="https://fiddle.sencha.com/fiddle/1dpn?height=700"></iframe>
+
 {% highlight js %}
 Ext.define('Ext.ux.form.field.CurrencyNumber', {
     extend: 'Ext.form.field.Number',
