@@ -1,5 +1,11 @@
 ---
 published: false
+layout: post
+date: 2016-07-18T02:51:17.000Z
+categories:
+  - Dev
+tags:
+  - extjs
 ---
 ## A Currency Number Field for ExtJS
 
