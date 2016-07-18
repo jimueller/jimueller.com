@@ -76,6 +76,6 @@ Ext.define('Ext.ux.form.field.CurrencyNumber', {
         cmp.setRawValue(cmp.getValue());
     }
 });
-{% end highlight %}
+{% endhighlight %}
 
 [Sencha Fiddle](https://fiddle.sencha.com/#fiddle/1dpn)
