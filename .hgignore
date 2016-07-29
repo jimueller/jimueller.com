@@ -27,6 +27,8 @@ glob:_rsync_exclude.txt
 
 # Octopress
 glob:_deploy.yml
+glob:.gist-cache
+glob:.code-highlighter-cache
 
 # Folders to ignore
 glob:.hg
