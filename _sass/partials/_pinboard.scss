@@ -22,6 +22,20 @@
 	padding: 0.5em;
 	margin: 0.5em 0;
 	border-radius: 2px;
+
+	// Little bit of a hack to get tags icon
+	// This should work because the first tag will always be the second link
+	a.pin-tag:nth-of-type(2){
+	
+		&::before{
+        	font-family: 'FontAwesome';
+        	color: $green;
+        	content: '\f02c';
+        	position: relative;
+			margin-right: 0.5em;
+        	top: 3px;
+		}
+	}
 }
 
 .pin-title {
