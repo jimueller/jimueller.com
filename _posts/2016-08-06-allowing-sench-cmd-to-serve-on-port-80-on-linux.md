@@ -43,11 +43,11 @@ Caused by: java.net.SocketException: Permission denied
 ```
 
 Sencha Cmd defaults to serving files port 1841, but sometimes there is a need to serve on port 80.
-On reason is if you are setting 'localhost' as an allowed cross-origin domain.
+One reason is if you are setting 'localhost' as an allowed cross-origin domain.
 
 On Linux, only root is allowed to bind processes to reserved ports - those up to 1023.  There are a few methods to get
 around this, such as configuring port routing or authbind. I prefer allowing java processes to bind to port 80
-by granting the `CAP_NET_BIND_SERVICE` permission permenantly to java.  Authbind can be used for
+by granting the `CAP_NET_BIND_SERVICE` permission permenantly to java.  [Authbind](https://en.wikipedia.org/wiki/Authbind) can be used for
 one time access, and may be more appropriate if there are security concerns.
 
 The following steps will demonstrate how to use **setcap** to allow java to bind on port 80. I would prefer
@@ -58,9 +58,7 @@ First, determine where java is installed, by following the symbolic links.
 `> whereis java`
 
 The output will be similar to:
-`java: /usr/bin/java /usr/share/java /usr/share/man/man1/java.1.gz`
-
-and we see that java is in `/usr/bin/java`.
+`java: /usr/bin/java /usr/share/java /usr/share/man/man1/java.1.gz` and we see that java is in `/usr/bin/java`.
 
 Let's take a look at that.
 
