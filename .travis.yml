@@ -22,3 +22,5 @@ deploy:
   script: scripts/gh-pages-deploy.sh
   on:
     branch: master
+
+sudo: false
