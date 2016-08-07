@@ -39,6 +39,13 @@ html, body {
   width: 100%;
   display: inline-block;
 
+  .site-title {
+    @extend %site-title;
+
+    font-size: 1.8em;
+    letter-spacing: -2px;
+  }
+
   .footer-logo {
     margin-right: 1em;
     margin-bottom: 1em;
@@ -46,6 +53,7 @@ html, body {
     @include media($large-screen) {
       float: left;
       margin-bottom: 0;
+      line-height: 1.8em;
     }
   }
 
