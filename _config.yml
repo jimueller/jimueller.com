@@ -6,8 +6,8 @@ email: blog[at]jimueller.com
 tagline: "Magnets, Milksteak, and Rum Ham"
 description: "Developer. Covering topics on Web Development, Scripting, fitness, and funny."
 baseurl: ""
-url: "http://jimueller.com"
-#url: "http://localhost:4000"
+favicons: "images/favicon"
+url: "http://localhost:4000"
 paginate: 5
 
 # --------------------------------------------------

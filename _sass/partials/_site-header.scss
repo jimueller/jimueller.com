@@ -81,7 +81,8 @@ header.navigation {
       line-height: $navigation-height;
       font-size: 2em;
       font-weight: 500;
-      color: $gray-lightest;
+      color: $green;
+      font-family: $heading-font-family;
     }
   }
 
@@ -129,6 +130,7 @@ header.navigation {
     padding: 0;
     width: 100%;
     z-index: 9999;
+    font-family: $heading-font-family;
 
     &.show {
       display: block;

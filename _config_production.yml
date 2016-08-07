@@ -1,3 +1,4 @@
 # Compress css for production
+url: "http://jimueller.com"
 sass:
   style: :compressed
