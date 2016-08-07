@@ -58,6 +58,7 @@ page_ext: html
 # Style
 sass:
   style: :expanded
+  line_comments: true
 
 # --------------------------------------------------
 # Plugins
