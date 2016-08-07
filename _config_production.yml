@@ -1,0 +1,3 @@
+# Compress css for production
+sass:
+  style: :compressed
