@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Allowing Sench Cmd to Serve on Port 80 on Linux"
+title: "Allowing Sencha Cmd to Serve on Port 80 on Linux"
 date: 2016-08-06T16:26:20-05:00
 publish: true
 categories: dev
-tags: sencha linux authbind
+tags: sencha linux authbind extjs
 ---
 
 If you've tried to serve files with Sencha Cmd on port 80, you'll probably see an error like this.
