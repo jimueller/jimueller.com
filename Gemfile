@@ -13,6 +13,7 @@ gem 'guard-livereload'
 
 group :jekyll_plugins do
   #gem 'octopress-codeblock'
+  gem 'octopress-linkblog'
   gem 'octopress-gist'
   gem 'octopress-codefence'
   gem 'jekyll-lunr-js-search'
