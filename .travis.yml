@@ -1,0 +1,17 @@
+language: go
+sudo: required
+
+install:
+- go get -v github.com/spf13/hugo
+script: bash ./scripts/cibuild
+
+branches:
+  only:
+  - master
+
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: scripts/gh-pages-deploy.sh
+  on:
+    branch: master
