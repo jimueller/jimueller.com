@@ -3,6 +3,7 @@ sudo: required
 
 install:
 - go get -v github.com/spf13/hugo
+
 script: bash ./scripts/cibuild
 
 branches:
@@ -10,8 +11,9 @@ branches:
   - master
 
 deploy:
+  local_dir: public
+  provider: pages
   skip_cleanup: true
-  provider: script
-  script: bash ./scripts/gh-pages-deploy.sh
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
   on:
     branch: master
