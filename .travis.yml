@@ -12,6 +12,6 @@ branches:
 deploy:
   skip_cleanup: true
   provider: script
-  script: scripts/gh-pages-deploy.sh
+  script: bash ./scripts/gh-pages-deploy.sh
   on:
     branch: master
