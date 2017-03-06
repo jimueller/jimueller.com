@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 set -e # halt script on error
 
+pwd
+ls
+
 #Hugo output directory
 cd public
+ls
 
 # Add Github Pages CNAME file
 echo ${BASE_URL} > CNAME
