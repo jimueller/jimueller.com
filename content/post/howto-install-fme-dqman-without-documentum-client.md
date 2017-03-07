@@ -3,6 +3,9 @@ date = "2013-09-06T11:22:46-06:00"
 title = "howto install fme dqman without documentum client"
 categories = ["dev"]
 tags = ["dqman", "documentum"]
+aliases = [
+	"/dev/2013/09/06/howto-install-fme-dqman-without-document-client/"
+]
 +++
 
 During a development project, I needed to run fme's dqMan to query Documentum, but didn't want to install the Documentum client as well.  The following procedure shows how to get the required Documentum files off of an existing install so dqMan can run.

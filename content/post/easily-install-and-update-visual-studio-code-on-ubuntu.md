@@ -3,6 +3,9 @@ date = "2015-11-22T11:22:05-06:00"
 title = "easily install and update visual studio code on ubuntu"
 categories = ["tools"]
 tags = ["VSCode", "Ubuntu-Make", "linux"]
+aliases = [
+    "/tools/2015/11/21/easily-install-and-update-visual-studio-code-on-ubuntu/"
+]
 +++
 
 [Visual Studio Code](https://code.visualstudio.com/), my current go-to editor on Windows and Linux. I prefer Xubuntu for it's combination of speed, configurability, and Git integration. It's just a really nice editor.
