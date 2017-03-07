@@ -1,6 +1,10 @@
 language: go
 sudo: required
 
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install python3-pygments
+
 install:
 - go get -v github.com/spf13/hugo
 
