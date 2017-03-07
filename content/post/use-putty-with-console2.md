@@ -3,6 +3,9 @@ date = "2012-08-18T20:49:34-06:00"
 title = "use putty with console2"
 categories = ["dev","tools"]
 tags = ["console2","ansicon", "console", "putty"]
+aliases = [
+    "/dev/tools/2012/08/18/use-putty-with-console2/"
+]
 +++
 
 [Console2](http://sourceforge.net/projects/console/files/) is a great
