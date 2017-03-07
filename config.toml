@@ -1,17 +1,17 @@
 baseurl = "http://jimueller.com/"
 languageCode = "en-us"
 title = "jimueller"
-theme = "hemingway2"
+theme = "black-and-light"
 copyright = "&copy; <a href=\"https://github.com/jimueller\">Jim Mueller</a> 2016"
 disqusShortname = "jimueller"
 googleAnalytics = "UA-34080417-2"
 description = "Your personal description"
 
-[params]
+pygmentsstyle       = "vs"
+pygmentscodefences  = true
 
-[params.highlight]
-style = "github"
-languages = ["go", "dockerfile"]
+[params]
+  sitename = "jimueller"
 
 [[params.social]]
 url = "https://github.com/jimueller"
