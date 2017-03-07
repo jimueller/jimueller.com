@@ -1,4 +1,30 @@
 baseurl = "http://jimueller.com/"
 languageCode = "en-us"
 title = "jimueller"
-theme = "hemingway"
+theme = "hemingway2"
+copyright = "&copy; <a href=\"https://github.com/jimueller\">Jim Mueller</a> 2016"
+disqusShortname = "jimueller"
+googleAnalytics = ""
+description = "Your personal description"
+
+[params]
+
+[params.highlight]
+style = "github"
+languages = ["go", "dockerfile"]
+
+[[params.social]]
+url = "https://github.com/jimueller"
+fa_icon = "fa-github"
+
+[[params.social]]
+url = "https://twitter.com/jimueller"
+fa_icon = "fa-twitter"
+
+[[params.social]]
+url = "https://telegram.me/jimueller"
+fa_icon = "fa-telegram"
+
+[[params.social]]
+url = "/index.xml"
+fa_icon = "fa-rss"
