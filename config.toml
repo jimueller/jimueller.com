@@ -4,7 +4,7 @@ title = "jimueller"
 theme = "hemingway2"
 copyright = "&copy; <a href=\"https://github.com/jimueller\">Jim Mueller</a> 2016"
 disqusShortname = "jimueller"
-googleAnalytics = ""
+googleAnalytics = "UA-34080417-2"
 description = "Your personal description"
 
 [params]
