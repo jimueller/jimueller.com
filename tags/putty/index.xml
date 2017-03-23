@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Putty on jimueller</title>
+    <link>http://jimueller.com/tags/putty/index.xml</link>
+    <description>Recent content in Putty on jimueller</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/jimueller&#34;&gt;Jim Mueller&lt;/a&gt; 2016</copyright>
+    <atom:link href="http://jimueller.com/tags/putty/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>use putty with console2</title>
+      <link>http://jimueller.com/post/use-putty-with-console2/</link>
+      <pubDate>Sat, 18 Aug 2012 20:49:34 -0600</pubDate>
+      
+      <guid>http://jimueller.com/post/use-putty-with-console2/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://sourceforge.net/projects/console/files/&#34;&gt;Console2&lt;/a&gt; is a great
+frontend on Windows for cmd.exe and PowerShell.  It
+provides re-sizable windows, a tabbed interface, and transparent
+windows.&lt;/p&gt;
+
+&lt;p&gt;It can also be used with
+&lt;a href=&#34;http://www.chiark.greenend.org.uk/~sgtatham/putty/&#34;&gt;PuTTY&lt;/a&gt;, but it
+takes a little bit of work.  The issue is apparently with ANSI escape
+codes. Thankfully David A. Sjøen
+(&lt;a href=&#34;https://twitter.com/dasjoen/&#34;&gt;@dasjoen&lt;/a&gt;) commented on &lt;a href=&#34;http://www.hanselman.com/blog/Console2ABetterWindowsCommandPrompt.aspx&#34;&gt;Scott
+Hanselman’s Console2
+article&lt;/a&gt;
+with the solution using ANSICON.&lt;/p&gt;
+
+&lt;p&gt;From the &lt;a href=&#34;https://github.com/adoxa/ansicon#readme&#34;&gt;ANSICON ReadMe&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;ANSICON provides ANSI escape sequences for Windows console programs.
+It provides much the same functionality as `ANSI.SYS’ does for
+MS-DOS. &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;instructions&#34;&gt;Instructions&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Download ANSICON (&lt;a href=&#34;https://github.com/adoxa/ansicon/downloads&#34;&gt;Github&lt;/a&gt;) and extract the
+contents from the &lt;code&gt;x86&lt;/code&gt; or &lt;code&gt;x64&lt;/code&gt; folders to your Console2 installation
+folder.&lt;/p&gt;
+
+&lt;p&gt;I now have the following files in my &lt;code&gt;C:\Program Files\Console2\&lt;/code&gt;
+directory:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ANSI32.dll&lt;/li&gt;
+&lt;li&gt;ANSI64.dll&lt;/li&gt;
+&lt;li&gt;ansicon.exe&lt;/li&gt;
+&lt;li&gt;ANSI-LLW.exe&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Open Console2 and create a new tab with the command line, replacing &lt;code&gt;aPuttyProfileName&lt;/code&gt; with the &lt;a href=&#34;http://the.earth.li/~sgtatham/putty/0.63/htmldoc/Chapter7.html#plink&#34;&gt;name of a saved PuTTY profile&lt;/a&gt;:&lt;/p&gt;
+C:\Program Files\Console2\ansicon.exe &#34;C:\Program Files (x86)\PuTTY\plink.exe&#34;
+-load aPuttyProfileName&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

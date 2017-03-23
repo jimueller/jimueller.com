@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <base href="http://jimueller.com/">
+    
+
+    <link href='https://fonts.googleapis.com/css?family=Overpass|Open+Sans:400|Old+Standard+TT:400' rel='stylesheet' type='text/css'>
+
+    <link rel="icon" type="image/png" href="/favicon_16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon_32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon_128x128.png" sizes="128x128">
+
+    <title>
+      
+      
+         allowing sencha cmd to serve on port 80 on linux 
+      
+    </title>
+    <link rel="canonical" href="http://jimueller.com/post/allowing-sencha-cmd-to-serve-on-port-80-on-linux/">
+
+    <style>
+  * {
+    border:0;
+    font:inherit;
+    font-size:100%;
+    vertical-align:baseline;
+    margin:0;
+    padding:0;
+    color: black;
+  }
+
+  body {
+    font-family:'Open Sans', 'Myriad Pro', Myriad, sans-serif;
+    font-size:17px;
+    line-height:160%;
+    color:#1d1313;
+    max-width:700px;
+    margin:auto;
+  }
+
+  p {
+    margin: 20px 0;
+  }
+
+  a img {
+    border:none;
+  }
+
+  img {
+    margin: 10px auto 10px auto;
+    max-width: 100%;
+    display: block;
+  }
+
+  pre, code {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    background-color: #f7f7f7;
+  }
+
+  code {
+    font-size: 12px;
+    padding: 4px;
+  }
+
+  pre {
+    margin-top: 0;
+    margin-bottom: 16px;
+    word-wrap: normal;
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+  }
+
+  pre>code {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    word-break: normal;
+    white-space: pre;
+    background: transparent;
+    border: 0;
+  }
+
+  pre code {
+    display: inline;
+    max-width: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0;
+  }
+
+  pre code::before,
+  pre code::after {
+    content: normal;
+  }
+
+  em,q,em,dfn {
+    font-style:italic;
+  }
+
+  .sans,html .gist .gist-file .gist-meta {
+    font-family:"Open Sans","Myriad Pro",Myriad,sans-serif;
+  }
+
+  .mono,pre,code,tt,p code,li code {
+    font-family:Menlo,Monaco,"Andale Mono","lucida console","Courier New",monospace;
+  }
+
+  .serif{
+    font-family:serif;
+  }
+
+  .heading,h1,h2,h3 {
+    font-family: Overpass, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  }
+
+  strong {
+    font-weight:600;
+  }
+
+  q:before {
+    content:"\201C";
+  }
+
+  q:after {
+    content:"\201D";
+  }
+
+  del,s {
+    text-decoration:line-through;
+  }
+
+  blockquote {
+    font-family:"Old Standard TT",serif;
+    text-align:center;
+    padding:50px;
+  }
+
+  blockquote p {
+    display:inline-block;
+    font-style:italic;
+  }
+
+  blockquote:before,blockquote:after {
+    font-family:"Old Standard TT",serif;
+    content:'\201C';
+    font-size:35px;
+    color:#403c3b;
+  }
+
+  blockquote:after {
+    content:'\201D';
+  }
+
+  hr {
+    width:40%;
+    height: 1px;
+    background:#403c3b;
+    margin: 25px auto;
+  }
+
+  h1 {
+    font-size:35px;
+  }
+
+  h2 {
+    font-size:28px;
+  }
+
+  h3 {
+    font-size:22px;
+    margin-top:18px;
+  }
+
+  h1 a,h2 a,h3 a {
+    text-decoration:none;
+  }
+
+  h1,h2 {
+    margin-top:28px;
+  }
+
+  #sub-header, time {
+    color:#403c3b;
+    font-size:13px;
+  }
+
+  #sub-header {
+    margin: 0 4px;
+  }
+
+  #nav h1 a {
+    font-size:35px;
+    color:#1d1313;
+    line-height:120%;
+  }
+
+  .posts_listing a,#nav a {
+    text-decoration: none;
+  }
+
+  li {
+    margin-left: 20px;
+  }
+
+  ul li {
+    margin-left: 5px;
+  }
+
+  ul li {
+    list-style-type: none;
+  }
+  ul li:before {
+    content:"\00BB \0020";
+  }
+
+  #nav ul li:before, .posts_listing li:before {
+    content:'';
+    margin-right:0;
+  }
+
+  #content {
+    text-align:left;
+    width:100%;
+    font-size:15px;
+    padding:60px 0 80px;
+  }
+
+  #content h1,#content h2 {
+    margin-bottom:5px;
+  }
+
+  #content h2 {
+    font-size:25px;
+  }
+
+  #content .entry-content {
+    margin-top:15px;
+  }
+
+  #content time {
+    margin-left:3px;
+  }
+
+  #content h1 {
+    font-size:30px;
+  }
+
+  .highlight {
+    margin: 10px 0;
+  }
+
+  .posts_listing {
+    margin:0 0 50px;
+  }
+
+  .posts_listing li {
+    margin:0 0 25px 15px;
+  }
+
+  .posts_listing li a:hover,#nav a:hover {
+    text-decoration: underline;
+  }
+
+  #nav {
+    text-align:center;
+    position:static;
+    margin-top:60px;
+  }
+
+  #nav ul {
+    display: table;
+    margin: 8px auto 0 auto;
+  }
+
+  #nav li {
+    list-style-type:none;
+    display:table-cell;
+    font-size:15px;
+    padding: 0 20px;
+  }
+
+  #links {
+    margin: 50px 0 0 0;
+  }
+
+  #links :nth-child(2) {
+    float:right;
+  }
+
+  #not-found {
+    text-align: center;
+  }
+
+  #not-found a {
+    font-family:"Old Standard TT",serif;
+    font-size: 200px;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 225px;
+  }
+
+  @media (max-width: 750px) {
+    body {
+      padding-left:20px;
+      padding-right:20px;
+    }
+
+    #nav h1 a {
+      font-size:28px;
+    }
+
+    #nav li {
+      font-size:13px;
+      padding: 0 15px;
+    }
+
+    #content {
+      margin-top:0;
+      padding-top:50px;
+      font-size:14px;
+    }
+
+    #content h1 {
+      font-size:25px;
+    }
+
+    #content h2 {
+      font-size:22px;
+    }
+
+    .posts_listing li div {
+      font-size:12px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    body {
+      padding-left:20px;
+      padding-right:20px;
+    }
+
+    #nav h1 a {
+      font-size:22px;
+    }
+
+    #nav li {
+      font-size:12px;
+      padding: 0 10px;
+    }
+
+    #content {
+      margin-top:0;
+      padding-top:20px;
+      font-size:12px;
+    }
+
+    #content h1 {
+      font-size:20px;
+    }
+
+    #content h2 {
+      font-size:18px;
+    }
+
+    .posts_listing li div{
+      font-size:12px;
+    }
+  }
+</style>
+
+
+    
+  </head>
+
+  <body>
+    <section id=nav>
+      <h1><a href="/">jimueller</a></h1>
+      <ul>
+        
+      </ul>
+    </section>
+
+
+<section id=content>
+  <h1> allowing sencha cmd to serve on port 80 on linux </h1>
+
+  <div id=sub-header>
+    August 2016 · 3 minute read
+  </div>
+
+  <div class="entry-content">
+    <p>If you&rsquo;ve tried to serve files with Sencha Cmd on port 80, you&rsquo;ll probably see an error like this.</p>
+
+<pre><code>user@localhost ~/dev/extjs/extjsapp $ sencha web -p 80 start
+Sencha Cmd v6.1.3.42
+[INF] Starting server on port : 80
+[INF] Mapping http://localhost:80/ to ....
+[WRN] FAILED SelectChannelConnector@0.0.0.0:80: java.net.SocketException: Permission denied
+[WRN] FAILED org.eclipse.jetty.server.Server@5d25ad3: java.net.SocketException: Permission denied
+Exception in thread &quot;Thread-5&quot; com.sencha.exceptions.BasicException: Permission denied
+	at com.sencha.exceptions.BasicException.wrap(BasicException.java:54)
+	at com.sencha.exceptions.BasicException.stealthify(BasicException.java:43)
+	at com.sencha.exceptions.BasicException.raise(BasicException.java:35)
+	at com.sencha.util.http.Server.start(Server.java:265)
+	at com.sencha.util.JettyServer.start(JettyServer.java:102)
+	at com.sencha.command.filesystem.StartCommand$1.run(StartCommand.java:72)
+	at com.sencha.util.ThreadUtil$1.run(ThreadUtil.java:65)
+	at com.sencha.util.ThreadUtil$2.run(ThreadUtil.java:162)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketException: Permission denied
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+	at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:288)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.sencha.util.http.Server.start(Server.java:263)
+	... 5 more
+</code></pre>
+
+<p>Sencha Cmd defaults to serving files port 1841, but sometimes there is a need to serve on port 80.
+One reason is if you are setting &lsquo;localhost&rsquo; as an allowed cross-origin domain.</p>
+
+<p>On Linux, only root is allowed to bind processes to reserved ports - those up to 1023.  There are a few methods to get
+around this, such as configuring port routing or authbind. I prefer allowing java processes to bind to port 80
+by granting the <code>CAP_NET_BIND_SERVICE</code> permission permenantly to java.  <a href="https://en.wikipedia.org/wiki/Authbind">Authbind</a> can be used for
+one time access, and may be more appropriate if there are security concerns.</p>
+
+<p>The following steps will demonstrate how to use <strong>setcap</strong> to allow java to bind on port 80. I would prefer
+to only grant Sencha Cmd with the permission, but was unable to determine how to do this.</p>
+
+<p>First, determine where java is installed, by following the symbolic links.</p>
+
+<p><code>&gt; whereis java</code></p>
+
+<p>The output will be similar to:
+<code>java: /usr/bin/java /usr/share/java /usr/share/man/man1/java.1.gz</code> and we see that java is in <code>/usr/bin/java</code>.</p>
+
+<p>Let&rsquo;s take a look at that.</p>
+> ls -l /usr/bin/java
+lrwxrwxrwx 1 root root 22 Jul 24 19:41 /usr/bin/java -> /etc/alternatives/java
+
+<p>We can see that <code>/usr/bin/java</code> is a symbolic link to <code>/etc/alternatives/java</code>, let&rsquo;s take a look at that.</p>
+> ls -l /etc/alternatives/java
+lrwxrwxrwx 1 root root 46 Jul 24 19:41 /etc/alternatives/java -> /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+
+<p>We can now see that the actual location of java is <code>/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java</code>.
+Now that we know where java is, we can grant permission to bind to low-numbered ports.</p>
+
+<pre><code>sudo setcap CAP_NET_BIND_SERVICE=+eip /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+</code></pre>
+
+<p>Here we are granting with the following permissions.</p>
+
+<ul>
+<li>e:Effictive activates the capability</li>
+<li>p:Permitted allows the capability</li>
+<li>i:Inherites the capability is inherited by child processes.</li>
+</ul>
+
+<p>Now that the <code>CAP_NET_BIND_SERVICE</code> capability has been granted, let&rsquo;s try serving on port 80.</p>
+
+<pre><code>user@localhost ~/dev/extjs/extjsapp $ sencha web -p 80 start
+Sencha Cmd v6.1.3.42
+[INF] Starting server on port : 80
+[INF] Mapping http://localhost:80/ to ....
+</code></pre>
+
+<p>That looks much better.</p>
+
+  </div>
+
+  <div id=links>
+    
+      <a class="basic-alignment left" href="http://jimueller.com/post/easily-install-and-update-visual-studio-code-on-ubuntu/">&laquo; easily install and update visual studio code on ubuntu</a>
+    
+    
+      <a class="basic-alignment left" href="http://jimueller.com/post/saving-nested-associated-date-with-extjs/">saving nested associated date with extjs &raquo;</a>
+    
+  </div>
+</section>
+
+  
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-34080417-2', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>
+
+
+

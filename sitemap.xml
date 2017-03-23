@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://jimueller.com/post/extjs-learning-resources/</loc>
+    <lastmod>2017-03-03T08:02:21-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/post/extjs-utility-classes/</loc>
+    <lastmod>2017-02-19T11:22:18-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/post/extjs-currency-number-field/</loc>
+    <lastmod>2017-02-19T11:21:20-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/post/switch-to-hugo/</loc>
+    <lastmod>2017-02-18T12:52:10-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/post/saving-nested-associated-date-with-extjs/</loc>
+    <lastmod>2016-08-18T12:56:54-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/post/allowing-sencha-cmd-to-serve-on-port-80-on-linux/</loc>
+    <lastmod>2016-08-06T11:20:50-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/post/easily-install-and-update-visual-studio-code-on-ubuntu/</loc>
+    <lastmod>2015-11-22T11:22:05-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/post/clean-websphere-portal-temp-directories/</loc>
+    <lastmod>2015-11-22T11:21:41-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/post/howto-install-fme-dqman-without-documentum-client/</loc>
+    <lastmod>2013-09-06T11:22:46-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/post/use-putty-with-console2/</loc>
+    <lastmod>2012-08-18T20:49:34-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/tags/ansicon/</loc>
+    <lastmod>2012-08-18T20:49:34-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/categories/blog/</loc>
+    <lastmod>2017-02-18T12:52:10-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/categories/</loc>
+    <lastmod>2017-02-18T12:52:10-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/tags/console/</loc>
+    <lastmod>2012-08-18T20:49:34-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/tags/console2/</loc>
+    <lastmod>2012-08-18T20:49:34-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/categories/dev/</loc>
+    <lastmod>2017-03-03T08:02:21-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/tags/documentum/</loc>
+    <lastmod>2013-09-06T11:22:46-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/tags/dqman/</loc>
+    <lastmod>2013-09-06T11:22:46-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/tags/extjs/</loc>
+    <lastmod>2017-03-03T08:02:21-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/tags/hugo/</loc>
+    <lastmod>2017-02-18T12:52:10-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/tags/jekyll/</loc>
+    <lastmod>2017-02-18T12:52:10-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/tags/linux/</loc>
+    <lastmod>2016-08-06T11:20:50-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/post/</loc>
+    <lastmod>2017-03-03T08:02:21-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/tags/putty/</loc>
+    <lastmod>2012-08-18T20:49:34-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/tags/sencha/</loc>
+    <lastmod>2017-03-03T08:02:21-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/tags/</loc>
+    <lastmod>2012-08-18T20:49:34-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/categories/tools/</loc>
+    <lastmod>2015-11-22T11:22:05-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/tags/ubuntu-make/</loc>
+    <lastmod>2015-11-22T11:22:05-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/tags/vscode/</loc>
+    <lastmod>2015-11-22T11:22:05-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/tags/websphere-portal/</loc>
+    <lastmod>2015-11-22T11:21:41-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/tags/x/</loc>
+    <lastmod>2017-02-19T11:22:18-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/categories/x/</loc>
+    <lastmod>2017-02-19T11:22:18-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/tags/y/</loc>
+    <lastmod>2017-02-19T11:22:18-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/categories/y/</loc>
+    <lastmod>2017-02-19T11:22:18-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jimueller.com/</loc>
+    <lastmod>2017-03-03T08:02:21-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

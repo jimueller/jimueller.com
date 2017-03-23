@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documentum on jimueller</title>
+    <link>http://jimueller.com/tags/documentum/index.xml</link>
+    <description>Recent content in Documentum on jimueller</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/jimueller&#34;&gt;Jim Mueller&lt;/a&gt; 2016</copyright>
+    <atom:link href="http://jimueller.com/tags/documentum/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>howto install fme dqman without documentum client</title>
+      <link>http://jimueller.com/post/howto-install-fme-dqman-without-documentum-client/</link>
+      <pubDate>Fri, 06 Sep 2013 11:22:46 -0600</pubDate>
+      
+      <guid>http://jimueller.com/post/howto-install-fme-dqman-without-documentum-client/</guid>
+      <description>&lt;p&gt;During a development project, I needed to run fme&amp;rsquo;s dqMan to query Documentum, but didn&amp;rsquo;t want to install the Documentum client as well.  The following procedure shows how to get the required Documentum files off of an existing install so dqMan can run.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The following procedure is for Documentum 6.5, it may be applicable for other versions&lt;/em&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Download &lt;a href=&#34;http://www.fme-us.com/technologies/ecm/emc-documentum/dqman/&#34;&gt;dqMan&lt;/a&gt; from the &lt;a href=&#34;http://www.fme-us.com/&#34;&gt;fme&lt;/a&gt; website.  You will receive the license file in an email.&lt;/li&gt;
+&lt;li&gt;Extract and install dqMan&lt;/li&gt;
+&lt;li&gt;From the content server, copy the &lt;code&gt;dmcl.dll&lt;/code&gt; file from the &lt;code&gt;Documentum\product\6.5\bin&lt;/code&gt; directory to a location on your system Path.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Create a dmcl.ini file and place the following section.&lt;/p&gt;
+[DOCBROKER_PRIMARY]
+host=yourContentServer #IP or Hostname&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Create and Environmental Variable named &lt;code&gt;DCML_CONFIG&lt;/code&gt; that points to the &lt;code&gt;dmcl.ini&lt;/code&gt; file.  E.g. &lt;code&gt;C:\dmcl.ini&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

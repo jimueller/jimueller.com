@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Extjs on jimueller</title>
+    <link>http://jimueller.com/tags/extjs/index.xml</link>
+    <description>Recent content in Extjs on jimueller</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/jimueller&#34;&gt;Jim Mueller&lt;/a&gt; 2016</copyright>
+    <atom:link href="http://jimueller.com/tags/extjs/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ExtJS Learning Resources</title>
+      <link>http://jimueller.com/post/extjs-learning-resources/</link>
+      <pubDate>Fri, 03 Mar 2017 08:02:21 -0600</pubDate>
+      
+      <guid>http://jimueller.com/post/extjs-learning-resources/</guid>
+      <description>
+
+&lt;p&gt;Learning ExtJS can be a bit of a challange since, although it is well documented, there seems to be less &amp;ldquo;real world&amp;rdquo; examples available.  Since ExtJS has become more focused on the enterprise, there is less activity on typical Q&amp;amp;A platforms like Stack Overflow.  Finally, ExtJS has made major changes in its last few releases which leaves many of the examples available badly outdated.&lt;/p&gt;
+
+&lt;p&gt;The good news is that there some great resources available for learning ExtJS, in addition to Sencha&amp;rsquo;s documentation.  Some are free, but those that aren&amp;rsquo;t free are still pretty cheap for what you get.&lt;/p&gt;
+
+&lt;h1 id=&#34;books&#34;&gt;Books&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Sencha Ext JS 6 Bootcamp in a Book: Classic Toolkit Edition&lt;/strong&gt; &lt;a href=&#34;http://a.co/29HVuqp&#34;&gt;Amazon&lt;/a&gt; by Steve Drucker of &lt;a href=&#34;https://www.figleaf.com/&#34;&gt;Fig Leaf&lt;/a&gt; is in my opinion the best, most cost-effective resource available for learning ExtJS.  The book is about $60 and is basically the student guide for a weeklong course on ExtJS.  The previous version of the book, covering ExtJS 5 is &lt;a href=&#34;http://a.co/41zr5y4&#34;&gt;still available for on $25&lt;/a&gt;, and for learning ExtJS fundamentals there is no major differences.  I consider this book to be the equivelent of classes provided by Sencha, which can cost more than a $1000.&lt;/p&gt;
+
+&lt;p&gt;The book covers everything you need to build ExtJS applications if you have no ExtJS experience.  There are no gaps for a beginner and even if you have ExtJS experience it is a great way to get the complete picture of building and app and filling in any gaps you may have.  The book does have some examples of creating custom components, but it does not go in depth on more advanced ExtJS topics.  If you are strictly looking for advanced ExtJS, this is not the best book for you.&lt;/p&gt;
+
+&lt;h1 id=&#34;extjs-documentation&#34;&gt;ExtJS Documentation&lt;/h1&gt;
+
+&lt;p&gt;The &lt;strong&gt;Sencha ExtJS documentation&lt;/strong&gt; is really good but in many cases you really have to know what you are looking for.  Like most SDK/API documentation, it is not going always tell you how to accomplish your goal. I&amp;rsquo;ve used the following practices to get the most out of the ExtJS docs.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Skim through all of the docs files to get an idea of what is available&lt;/li&gt;
+&lt;li&gt;Use the search functionality and look for synonyms when trying to find specific events, methods, or properties&lt;/li&gt;
+&lt;li&gt;View the source to view JSDuck comments that may be missing from the new docs site&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To learn ExtJS, I spend a significant amount of time reading the docs to understand what classes were available and their purpose.  I try to take a &amp;ldquo;when in Rome&amp;rdquo; approach when using frameworks, so in an ExtJS project, I will try to find the ExtJS way of doing things.  By browsing the docs, I was able to have an idea of what framework classes could be used to accomplish a goal without resorting to using another framework like jQuery or writing my own function.  Ext has many utility classes and methods on the Ext object that can do just about anything jQuery can do, and has functions for formatting or manipulating  text.  ExtJS is a large framework and there are no shortcuts for understanding what it provides.&lt;/p&gt;
+
+&lt;p&gt;When looking for a specific method, event, or property, it&amp;rsquo;s useful to use the search/filter tool.  Ext is pretty consistent on naming, but often it&amp;rsquo;s necessary to search for synonyms.  For example, if you are looking for the control of a component&amp;rsquo;s visibility, try searching for &amp;ldquo;visible, hidden, hide, show&amp;rdquo; so that you don&amp;rsquo;t overlook one of the class&amp;rsquo;s members.&lt;/p&gt;
+
+&lt;p&gt;When Sencha switched the docs site in late 2016, the new version has had trouble parsing out the JSDuck comments used in ExtJS source code.  This seems to be expecially true for inherited docs.  To&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>extjs currency number field</title>
+      <link>http://jimueller.com/post/extjs-currency-number-field/</link>
+      <pubDate>Sun, 19 Feb 2017 11:21:20 -0600</pubDate>
+      
+      <guid>http://jimueller.com/post/extjs-currency-number-field/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>saving nested associated date with extjs</title>
+      <link>http://jimueller.com/post/saving-nested-associated-date-with-extjs/</link>
+      <pubDate>Thu, 18 Aug 2016 12:56:54 -0600</pubDate>
+      
+      <guid>http://jimueller.com/post/saving-nested-associated-date-with-extjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>allowing sencha cmd to serve on port 80 on linux</title>
+      <link>http://jimueller.com/post/allowing-sencha-cmd-to-serve-on-port-80-on-linux/</link>
+      <pubDate>Sat, 06 Aug 2016 11:20:50 -0600</pubDate>
+      
+      <guid>http://jimueller.com/post/allowing-sencha-cmd-to-serve-on-port-80-on-linux/</guid>
+      <description>&lt;p&gt;If you&amp;rsquo;ve tried to serve files with Sencha Cmd on port 80, you&amp;rsquo;ll probably see an error like this.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;user@localhost ~/dev/extjs/extjsapp $ sencha web -p 80 start
+Sencha Cmd v6.1.3.42
+[INF] Starting server on port : 80
+[INF] Mapping http://localhost:80/ to ....
+[WRN] FAILED SelectChannelConnector@0.0.0.0:80: java.net.SocketException: Permission denied
+[WRN] FAILED org.eclipse.jetty.server.Server@5d25ad3: java.net.SocketException: Permission denied
+Exception in thread &amp;quot;Thread-5&amp;quot; com.sencha.exceptions.BasicException: Permission denied
+	at com.sencha.exceptions.BasicException.wrap(BasicException.java:54)
+	at com.sencha.exceptions.BasicException.stealthify(BasicException.java:43)
+	at com.sencha.exceptions.BasicException.raise(BasicException.java:35)
+	at com.sencha.util.http.Server.start(Server.java:265)
+	at com.sencha.util.JettyServer.start(JettyServer.java:102)
+	at com.sencha.command.filesystem.StartCommand$1.run(StartCommand.java:72)
+	at com.sencha.util.ThreadUtil$1.run(ThreadUtil.java:65)
+	at com.sencha.util.ThreadUtil$2.run(ThreadUtil.java:162)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketException: Permission denied
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+	at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:288)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.sencha.util.http.Server.start(Server.java:263)
+	... 5 more
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sencha Cmd defaults to serving files port 1841, but sometimes there is a need to serve on port 80.
+One reason is if you are setting &amp;lsquo;localhost&amp;rsquo; as an allowed cross-origin domain.&lt;/p&gt;
+
+&lt;p&gt;On Linux, only root is allowed to bind processes to reserved ports - those up to 1023.  There are a few methods to get
+around this, such as configuring port routing or authbind. I prefer allowing java processes to bind to port 80
+by granting the &lt;code&gt;CAP_NET_BIND_SERVICE&lt;/code&gt; permission permenantly to java.  &lt;a href=&#34;https://en.wikipedia.org/wiki/Authbind&#34;&gt;Authbind&lt;/a&gt; can be used for
+one time access, and may be more appropriate if there are security concerns.&lt;/p&gt;
+
+&lt;p&gt;The following steps will demonstrate how to use &lt;strong&gt;setcap&lt;/strong&gt; to allow java to bind on port 80. I would prefer
+to only grant Sencha Cmd with the permission, but was unable to determine how to do this.&lt;/p&gt;
+
+&lt;p&gt;First, determine where java is installed, by following the symbolic links.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;gt; whereis java&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The output will be similar to:
+&lt;code&gt;java: /usr/bin/java /usr/share/java /usr/share/man/man1/java.1.gz&lt;/code&gt; and we see that java is in &lt;code&gt;/usr/bin/java&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s take a look at that.&lt;/p&gt;
+&gt; ls -l /usr/bin/java
+lrwxrwxrwx 1 root root 22 Jul 24 19:41 /usr/bin/java -&gt; /etc/alternatives/java
+
+&lt;p&gt;We can see that &lt;code&gt;/usr/bin/java&lt;/code&gt; is a symbolic link to &lt;code&gt;/etc/alternatives/java&lt;/code&gt;, let&amp;rsquo;s take a look at that.&lt;/p&gt;
+&gt; ls -l /etc/alternatives/java
+lrwxrwxrwx 1 root root 46 Jul 24 19:41 /etc/alternatives/java -&gt; /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+
+&lt;p&gt;We can now see that the actual location of java is &lt;code&gt;/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java&lt;/code&gt;.
+Now that we know where java is, we can grant permission to bind to low-numbered ports.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo setcap CAP_NET_BIND_SERVICE=+eip /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here we are granting with the following permissions.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;e:Effictive activates the capability&lt;/li&gt;
+&lt;li&gt;p:Permitted allows the capability&lt;/li&gt;
+&lt;li&gt;i:Inherites the capability is inherited by child processes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now that the &lt;code&gt;CAP_NET_BIND_SERVICE&lt;/code&gt; capability has been granted, let&amp;rsquo;s try serving on port 80.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;user@localhost ~/dev/extjs/extjsapp $ sencha web -p 80 start
+Sencha Cmd v6.1.3.42
+[INF] Starting server on port : 80
+[INF] Mapping http://localhost:80/ to ....
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That looks much better.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

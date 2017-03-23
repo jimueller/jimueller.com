@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on jimueller</title>
+    <link>http://jimueller.com/tags/linux/index.xml</link>
+    <description>Recent content in Linux on jimueller</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/jimueller&#34;&gt;Jim Mueller&lt;/a&gt; 2016</copyright>
+    <atom:link href="http://jimueller.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>allowing sencha cmd to serve on port 80 on linux</title>
+      <link>http://jimueller.com/post/allowing-sencha-cmd-to-serve-on-port-80-on-linux/</link>
+      <pubDate>Sat, 06 Aug 2016 11:20:50 -0600</pubDate>
+      
+      <guid>http://jimueller.com/post/allowing-sencha-cmd-to-serve-on-port-80-on-linux/</guid>
+      <description>&lt;p&gt;If you&amp;rsquo;ve tried to serve files with Sencha Cmd on port 80, you&amp;rsquo;ll probably see an error like this.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;user@localhost ~/dev/extjs/extjsapp $ sencha web -p 80 start
+Sencha Cmd v6.1.3.42
+[INF] Starting server on port : 80
+[INF] Mapping http://localhost:80/ to ....
+[WRN] FAILED SelectChannelConnector@0.0.0.0:80: java.net.SocketException: Permission denied
+[WRN] FAILED org.eclipse.jetty.server.Server@5d25ad3: java.net.SocketException: Permission denied
+Exception in thread &amp;quot;Thread-5&amp;quot; com.sencha.exceptions.BasicException: Permission denied
+	at com.sencha.exceptions.BasicException.wrap(BasicException.java:54)
+	at com.sencha.exceptions.BasicException.stealthify(BasicException.java:43)
+	at com.sencha.exceptions.BasicException.raise(BasicException.java:35)
+	at com.sencha.util.http.Server.start(Server.java:265)
+	at com.sencha.util.JettyServer.start(JettyServer.java:102)
+	at com.sencha.command.filesystem.StartCommand$1.run(StartCommand.java:72)
+	at com.sencha.util.ThreadUtil$1.run(ThreadUtil.java:65)
+	at com.sencha.util.ThreadUtil$2.run(ThreadUtil.java:162)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketException: Permission denied
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+	at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:288)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.sencha.util.http.Server.start(Server.java:263)
+	... 5 more
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sencha Cmd defaults to serving files port 1841, but sometimes there is a need to serve on port 80.
+One reason is if you are setting &amp;lsquo;localhost&amp;rsquo; as an allowed cross-origin domain.&lt;/p&gt;
+
+&lt;p&gt;On Linux, only root is allowed to bind processes to reserved ports - those up to 1023.  There are a few methods to get
+around this, such as configuring port routing or authbind. I prefer allowing java processes to bind to port 80
+by granting the &lt;code&gt;CAP_NET_BIND_SERVICE&lt;/code&gt; permission permenantly to java.  &lt;a href=&#34;https://en.wikipedia.org/wiki/Authbind&#34;&gt;Authbind&lt;/a&gt; can be used for
+one time access, and may be more appropriate if there are security concerns.&lt;/p&gt;
+
+&lt;p&gt;The following steps will demonstrate how to use &lt;strong&gt;setcap&lt;/strong&gt; to allow java to bind on port 80. I would prefer
+to only grant Sencha Cmd with the permission, but was unable to determine how to do this.&lt;/p&gt;
+
+&lt;p&gt;First, determine where java is installed, by following the symbolic links.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;gt; whereis java&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The output will be similar to:
+&lt;code&gt;java: /usr/bin/java /usr/share/java /usr/share/man/man1/java.1.gz&lt;/code&gt; and we see that java is in &lt;code&gt;/usr/bin/java&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s take a look at that.&lt;/p&gt;
+&gt; ls -l /usr/bin/java
+lrwxrwxrwx 1 root root 22 Jul 24 19:41 /usr/bin/java -&gt; /etc/alternatives/java
+
+&lt;p&gt;We can see that &lt;code&gt;/usr/bin/java&lt;/code&gt; is a symbolic link to &lt;code&gt;/etc/alternatives/java&lt;/code&gt;, let&amp;rsquo;s take a look at that.&lt;/p&gt;
+&gt; ls -l /etc/alternatives/java
+lrwxrwxrwx 1 root root 46 Jul 24 19:41 /etc/alternatives/java -&gt; /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+
+&lt;p&gt;We can now see that the actual location of java is &lt;code&gt;/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java&lt;/code&gt;.
+Now that we know where java is, we can grant permission to bind to low-numbered ports.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo setcap CAP_NET_BIND_SERVICE=+eip /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here we are granting with the following permissions.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;e:Effictive activates the capability&lt;/li&gt;
+&lt;li&gt;p:Permitted allows the capability&lt;/li&gt;
+&lt;li&gt;i:Inherites the capability is inherited by child processes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now that the &lt;code&gt;CAP_NET_BIND_SERVICE&lt;/code&gt; capability has been granted, let&amp;rsquo;s try serving on port 80.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;user@localhost ~/dev/extjs/extjsapp $ sencha web -p 80 start
+Sencha Cmd v6.1.3.42
+[INF] Starting server on port : 80
+[INF] Mapping http://localhost:80/ to ....
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That looks much better.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>easily install and update visual studio code on ubuntu</title>
+      <link>http://jimueller.com/post/easily-install-and-update-visual-studio-code-on-ubuntu/</link>
+      <pubDate>Sun, 22 Nov 2015 11:22:05 -0600</pubDate>
+      
+      <guid>http://jimueller.com/post/easily-install-and-update-visual-studio-code-on-ubuntu/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;Visual Studio Code&lt;/a&gt;, my current go-to editor on Windows and Linux. I prefer Xubuntu for it&amp;rsquo;s combination of speed, configurability, and Git integration. It&amp;rsquo;s just a really nice editor.&lt;/p&gt;
+
+&lt;p&gt;As a relativly new product in Beta status, it&amp;rsquo;s getting fairly frequent updates. This isn&amp;rsquo;t really a problem on Windows since it has an installer to take care of updates.  This is probably true for Mac as well, but on Linux VSCode is provided as a .zip archive.&lt;/p&gt;
+
+&lt;p&gt;The official installation instructions for Linux are to extract this .zip file to a directory and open the
+&lt;strong&gt;code&lt;/strong&gt; executable.  Honestly, as a relativly novice Linux user, this method for installation isn&amp;rsquo;t very hard.  However, there is an arguably easier way, by using &lt;a href=&#34;https://wiki.ubuntu.com/ubuntu-make&#34;&gt;Ubuntu Make&lt;/a&gt;, which I came across on from an &lt;a href=&#34;http://askubuntu.com/a/616363&#34;&gt;answer to a question about this topic on AskUbuntu&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I wasn&amp;rsquo;t previously aware of Ubuntu Make, here&amp;rsquo;s the definition from the Ubuntu Wiki.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Ubuntu Make is a command line tool which allows you to download the latest version of popular developer tools on your installation, installing it longside all the required dependencies (which will only ask for root access if you don&amp;rsquo;t  have all the required dependencies installed already), enable multi-arch on your system if you are on a 64 bit machine, integrate it with the Unity launcher… Basically, one command to get your system ready to develop with!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Sounds great, and it is. Installing with Ubuntu Make gives the added benefits of making upgrading a one step process and making the Code icon available in menus and launchers.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;installation&#34;&gt;Installation&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Install Ubuntu Make&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;{% highlight shell %}
+sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
+sudo apt-get update
+sudo apt-get install ubuntu-make
+{% endhighlight %}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Install Visual Studio Code with Make&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;umake web visual-studio-code
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When you&amp;rsquo;re done, a Visual Studio Code icon will be automatically added to your launcher, and will now be available
+in the Applications menu, likely under the &lt;strong&gt;Develeopment&lt;/strong&gt; folder.&lt;/p&gt;
+
+&lt;h4 id=&#34;upgrade&#34;&gt;Upgrade&lt;/h4&gt;
+
+&lt;p&gt;When Visual Studio Code notifies me that a newer version is available, I just run the &lt;code&gt;umake&lt;/code&gt; command again and
+VS Code is updated seamlessly.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;umake web visual-studio-code
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;references&#34;&gt;References:&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://askubuntu.com/a/616363&#34;&gt;How to install Visual Studio Code on Ubuntu?&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

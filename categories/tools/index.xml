@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tools on jimueller</title>
+    <link>http://jimueller.com/categories/tools/index.xml</link>
+    <description>Recent content in Tools on jimueller</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/jimueller&#34;&gt;Jim Mueller&lt;/a&gt; 2016</copyright>
+    <atom:link href="http://jimueller.com/categories/tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>easily install and update visual studio code on ubuntu</title>
+      <link>http://jimueller.com/post/easily-install-and-update-visual-studio-code-on-ubuntu/</link>
+      <pubDate>Sun, 22 Nov 2015 11:22:05 -0600</pubDate>
+      
+      <guid>http://jimueller.com/post/easily-install-and-update-visual-studio-code-on-ubuntu/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;Visual Studio Code&lt;/a&gt;, my current go-to editor on Windows and Linux. I prefer Xubuntu for it&amp;rsquo;s combination of speed, configurability, and Git integration. It&amp;rsquo;s just a really nice editor.&lt;/p&gt;
+
+&lt;p&gt;As a relativly new product in Beta status, it&amp;rsquo;s getting fairly frequent updates. This isn&amp;rsquo;t really a problem on Windows since it has an installer to take care of updates.  This is probably true for Mac as well, but on Linux VSCode is provided as a .zip archive.&lt;/p&gt;
+
+&lt;p&gt;The official installation instructions for Linux are to extract this .zip file to a directory and open the
+&lt;strong&gt;code&lt;/strong&gt; executable.  Honestly, as a relativly novice Linux user, this method for installation isn&amp;rsquo;t very hard.  However, there is an arguably easier way, by using &lt;a href=&#34;https://wiki.ubuntu.com/ubuntu-make&#34;&gt;Ubuntu Make&lt;/a&gt;, which I came across on from an &lt;a href=&#34;http://askubuntu.com/a/616363&#34;&gt;answer to a question about this topic on AskUbuntu&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I wasn&amp;rsquo;t previously aware of Ubuntu Make, here&amp;rsquo;s the definition from the Ubuntu Wiki.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Ubuntu Make is a command line tool which allows you to download the latest version of popular developer tools on your installation, installing it longside all the required dependencies (which will only ask for root access if you don&amp;rsquo;t  have all the required dependencies installed already), enable multi-arch on your system if you are on a 64 bit machine, integrate it with the Unity launcher… Basically, one command to get your system ready to develop with!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Sounds great, and it is. Installing with Ubuntu Make gives the added benefits of making upgrading a one step process and making the Code icon available in menus and launchers.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;installation&#34;&gt;Installation&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Install Ubuntu Make&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;{% highlight shell %}
+sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
+sudo apt-get update
+sudo apt-get install ubuntu-make
+{% endhighlight %}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Install Visual Studio Code with Make&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;umake web visual-studio-code
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When you&amp;rsquo;re done, a Visual Studio Code icon will be automatically added to your launcher, and will now be available
+in the Applications menu, likely under the &lt;strong&gt;Develeopment&lt;/strong&gt; folder.&lt;/p&gt;
+
+&lt;h4 id=&#34;upgrade&#34;&gt;Upgrade&lt;/h4&gt;
+
+&lt;p&gt;When Visual Studio Code notifies me that a newer version is available, I just run the &lt;code&gt;umake&lt;/code&gt; command again and
+VS Code is updated seamlessly.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;umake web visual-studio-code
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;references&#34;&gt;References:&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://askubuntu.com/a/616363&#34;&gt;How to install Visual Studio Code on Ubuntu?&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>use putty with console2</title>
+      <link>http://jimueller.com/post/use-putty-with-console2/</link>
+      <pubDate>Sat, 18 Aug 2012 20:49:34 -0600</pubDate>
+      
+      <guid>http://jimueller.com/post/use-putty-with-console2/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://sourceforge.net/projects/console/files/&#34;&gt;Console2&lt;/a&gt; is a great
+frontend on Windows for cmd.exe and PowerShell.  It
+provides re-sizable windows, a tabbed interface, and transparent
+windows.&lt;/p&gt;
+
+&lt;p&gt;It can also be used with
+&lt;a href=&#34;http://www.chiark.greenend.org.uk/~sgtatham/putty/&#34;&gt;PuTTY&lt;/a&gt;, but it
+takes a little bit of work.  The issue is apparently with ANSI escape
+codes. Thankfully David A. Sjøen
+(&lt;a href=&#34;https://twitter.com/dasjoen/&#34;&gt;@dasjoen&lt;/a&gt;) commented on &lt;a href=&#34;http://www.hanselman.com/blog/Console2ABetterWindowsCommandPrompt.aspx&#34;&gt;Scott
+Hanselman’s Console2
+article&lt;/a&gt;
+with the solution using ANSICON.&lt;/p&gt;
+
+&lt;p&gt;From the &lt;a href=&#34;https://github.com/adoxa/ansicon#readme&#34;&gt;ANSICON ReadMe&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;ANSICON provides ANSI escape sequences for Windows console programs.
+It provides much the same functionality as `ANSI.SYS’ does for
+MS-DOS. &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;instructions&#34;&gt;Instructions&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Download ANSICON (&lt;a href=&#34;https://github.com/adoxa/ansicon/downloads&#34;&gt;Github&lt;/a&gt;) and extract the
+contents from the &lt;code&gt;x86&lt;/code&gt; or &lt;code&gt;x64&lt;/code&gt; folders to your Console2 installation
+folder.&lt;/p&gt;
+
+&lt;p&gt;I now have the following files in my &lt;code&gt;C:\Program Files\Console2\&lt;/code&gt;
+directory:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ANSI32.dll&lt;/li&gt;
+&lt;li&gt;ANSI64.dll&lt;/li&gt;
+&lt;li&gt;ansicon.exe&lt;/li&gt;
+&lt;li&gt;ANSI-LLW.exe&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Open Console2 and create a new tab with the command line, replacing &lt;code&gt;aPuttyProfileName&lt;/code&gt; with the &lt;a href=&#34;http://the.earth.li/~sgtatham/putty/0.63/htmldoc/Chapter7.html#plink&#34;&gt;name of a saved PuTTY profile&lt;/a&gt;:&lt;/p&gt;
+C:\Program Files\Console2\ansicon.exe &#34;C:\Program Files (x86)\PuTTY\plink.exe&#34;
+-load aPuttyProfileName&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

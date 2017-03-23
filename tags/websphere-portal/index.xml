@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Websphere Portal on jimueller</title>
+    <link>http://jimueller.com/tags/websphere-portal/index.xml</link>
+    <description>Recent content in Websphere Portal on jimueller</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/jimueller&#34;&gt;Jim Mueller&lt;/a&gt; 2016</copyright>
+    <atom:link href="http://jimueller.com/tags/websphere-portal/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>clean websphere portal temp directories</title>
+      <link>http://jimueller.com/post/clean-websphere-portal-temp-directories/</link>
+      <pubDate>Sun, 22 Nov 2015 11:21:41 -0600</pubDate>
+      
+      <guid>http://jimueller.com/post/clean-websphere-portal-temp-directories/</guid>
+      <description>
+
+&lt;p&gt;WebSphere and WebSphere Portal create temporary directories for managing publish state, session state, and other data that can accumulate, degrading performance and causing publishing synchronization issues, especially on a development machine.  If you begin to experience slow startup times or have publishing errors from RAD, cleaning temp folders can often resolve these issues.&lt;/p&gt;
+
+&lt;h2 id=&#34;on-windows-use-robocopy-to-delete-long-file-paths&#34;&gt;On Windows, use Robocopy to delete long file paths&lt;/h2&gt;
+
+&lt;p&gt;Note: On Windows, long directory paths can sometimes cause problems when trying to delete files in the WebSphere directory.  &lt;a href=&#34;https://technet.microsoft.com/en-us/library/cc733145%28WS.10%29.aspx&#34;&gt;Robocopy.exe&lt;/a&gt; is a bundled utility that has support for long file paths.  Robocopy can be used to all files in a directory by mirroring an empty directory.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Create an empty directory.  &lt;code&gt;C:\&amp;gt;mkdir temp/empty&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Using the empty directory as the &lt;strong&gt;source&lt;/strong&gt; directory, you can use Robocopy&amp;rsquo;s &lt;code&gt;/MIR&lt;/code&gt; switch to mirror the empty directory, effectivly deleteing all files in the &lt;strong&gt;destination&lt;/strong&gt; directory.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;&amp;gt;robocopy.exe C:\temp\empty C:\folder\to\delete\ /MIR&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Stop the server.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;profile_root/wstemp
+profile_root/temp
+profile_root/logs
+profile_root/tranlog&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
