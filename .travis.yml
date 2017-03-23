@@ -2,12 +2,12 @@ language: go
 sudo: required
 
 git:
-  submodules: false
+  submodules: true
 
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install python3-pygments
-  - git submodule update --init --recursive
+  #- git submodule update --init --recursive
 
 install:
 - go get -v github.com/spf13/hugo
