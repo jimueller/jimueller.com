@@ -1,7 +1,7 @@
 baseurl = "http://jimueller.com/"
 languageCode = "en-us"
 title = "jimueller"
-theme = "black-and-light"
+theme = "simple-hugo-theme"
 copyright = "&copy; <a href=\"https://github.com/jimueller\">Jim Mueller</a> 2016"
 disqusShortname = "jimueller"
 googleAnalytics = "UA-34080417-2"
