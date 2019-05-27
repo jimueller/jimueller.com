@@ -1,4 +1,4 @@
-baseurl = "http://jimueller.com/"
+baseURL = "http://jimueller.com/"
 languageCode = "en-us"
 title = "jimueller"
 theme = "simple-hugo-theme"

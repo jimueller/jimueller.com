@@ -1,6 +1,6 @@
 +++
 date = "2016-08-06T11:20:50-06:00"
-title = "allowing sencha cmd to serve on port 80 on linux"
+title = "Allowing Sencha Cmd to Serve on Port 80 on Linux"
 categories = ["dev"]
 tags = ["extjs", "sencha", "linux"]
 +++
