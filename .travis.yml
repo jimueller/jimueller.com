@@ -14,6 +14,6 @@ deploy:
   provider: pages
   skip_cleanup: true
   fqdn: $BASE_URL
-  github_token: $GH_TOKEN
+  # github_token: $GH_TOKEN
   on:
     branch: master
